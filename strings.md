@@ -95,7 +95,7 @@ print(aux_var)
 Az első sor megnyitja a fájlt, a második beolvassa a sorokat egy tömbbe, a harmadik a line0
 stringet definiálja, az értéke pedig a tömb nulladik eleme. Ezután az aux_var az így definiált
 line0 string, azaz tömb 12. elemét kapja, amit végül kiíratunk.
-Ha string részleteket, vagy mintákat keresünk persze ezt az egészet érdemes for-ciklussal
+Ha string részleteket, vagy mintákat keresünk persze ezt az egészet érdemes ```for```-ciklussal
 automatizálni, de erről majd a következő utána fejezetben lesz szó. Elöljáróban annyit, amennyi
 a feladatok megoldásához szükséges:
 
@@ -106,7 +106,7 @@ print(line[0])
 f1.close()
 ```
 
-Ez a kódrészlet beolvassa a script_1.txt fájlt és végigfut a sorain majd minden sornak a nulladik
+Ez a kódrészlet beolvassa a ```script_1.txt``` fájlt és végigfut a sorain majd minden sornak a nulladik
 elemét kiírja. Majd bezárjuk a fájlt. A line tehát kezelhető úgy, mint a fájlból egy sor.
 A fájlba való kiíratás hasonlóan működik. Ha új fájlt kívánunk létrehozni, akkor a következőt
 csináljuk:
@@ -122,15 +122,16 @@ file1.write("Today \n")
 file1.close()
 ```
 
-Az első sorban megnyitunk egy fájlt, amelyik új. A w jelzi, hogy írni fogjuk, ahogy korábban
-az r jelezte, hogy olvasni fogjuk a fájlt. Ezek után definiálunk egy stringeket tartalmazó tömböt,
+Az első sorban megnyitunk egy fájlt, amelyik új. A ```w``` jelzi, hogy írni fogjuk, ahogy korábban
+az ```r``` jelezte, hogy olvasni fogjuk a fájlt. Ezek után definiálunk egy stringeket tartalmazó tömböt,
 majd írunk a fájlba egy szót „Hello”. Ezután az L tömböt is beleírjuk, majd bezárjuk.
 A következő három sorban hozzáadjuk a fájlhoz a „Today” szót. Megnyitjuk a fájlt; az a jelzi,
 hogy append, azaz hozzárakás következik. Ezután írjuk bele a szót a fájlba, majd bezárjuk.
-Feladatok:
+
+# Feladatok:
 - Próbálja ki a 4. blokkban található string függvényeket!
-- Töltse le az „script_1.txt” nevű példafájlt és olvassa be!
+- Töltse le az ```script_1.txt``` nevű példafájlt és olvassa be!
 	- Állapítsa meg, hogy tartalmaz-e olyan sort, amely csupa alfanumerikus értékekből áll.
 	- Állapítsa meg, hogy tartalmaz-e olyan sort, amely csupa numerikus értékekből áll.
 	- Állapítsa meg, hogy tartalmaz-e olyan sort, amely csak kisbetűből áll.
-	- Keresse meg a legrövidebb sort. A sorok számontartásához használhatja az i++ indexelést.
+	- Keresse meg a legrövidebb sort. A sorok számontartásához használhatja az ```i++``` indexelést.
