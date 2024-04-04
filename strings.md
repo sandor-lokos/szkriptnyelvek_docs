@@ -53,6 +53,22 @@ Még több izgalmas string függvény található [itt](https://www.w3schools.co
 
 # Beolvasás promptról
 
+Van lehetőség a felhasználótól adatot bekérni a prompton, bár ez nem egy elterjedt gyakorlat.
+Kisebb tesztelésre azonban hasznos lehet, ezért megemlitjük. Erre a célra az ```input()``` nevű
+függvény áll rendelkezésre. Az alábbi példa mutatja, hogyan kell használni:
+
+```
+name = input('Enter Your Name: ')
+print(name)
+
+>> Enter Your Name: Steve
+>> 'Steve'
+```
+
+Ennél fontosabb és elterjedtebb GUI-ról vagy fájlból beolvasni információkat. Utóbbit
+tekintjük át a következő fejezetben.
+
+
 # Fájlok beolvasása és kiirása
 
 A továbbiakban minden feladat esetén szükségünk lesz fájlok olvasására és írására. Ez a feladat
