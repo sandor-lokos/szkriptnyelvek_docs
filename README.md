@@ -11,10 +11,9 @@ Törzsanyag
 	- [Fájlok beolvasása és kiirása](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/strings.md#f%C3%A1jlok-beolvas%C3%A1sa-%C3%A9s-kiir%C3%A1sa)
 * [Matematikai operátorok](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/mathops.md)
 * [Vezérlési szerkezetek](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/statements.md)
-	- if
-	- for
-	- while
-	- main-if
+	- [if](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/statements.md#az-if-statement)
+	- [A ciklusok, break, continue](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/statements.md#a-ciklusok-break-continue)
+	- [main-if](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/statements.md#egy-furcsa-if-statement----az-ifname--main-idiom)
 * [Listák tipusai](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/lists.md)
 * [Függvények](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functions.md)
 * [Hibakezelés](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/errors.md)
