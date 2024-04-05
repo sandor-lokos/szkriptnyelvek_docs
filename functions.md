@@ -6,7 +6,7 @@ hogyan kell változót definiálni.
 # A függvény definíciója
 
 C/C++ nyelveken egy függvény – a változókhoz hasonlóan – szintén van típusa, amely attól
-függ, hogy milyen típust térít vissza a függvény. Egy ```float``` típusú függvény ```float```-ot, 
+függ, hogy milyen típust térít vissza a függvény. Egy `float` típusú függvény `float`-ot, 
 egy `void` függvény semmit sem térít vissza. Pythonban – a változókhoz hasonlóan – a függvényeknek
 sem kötelező megadni típust, de lehet. A definiálásukhoz egyszerűen a `def` kulcsszót használjuk 
 függetlenül attól, hogy mit térítenek vissza, ha egyáltalán.
@@ -17,6 +17,7 @@ Tehát a szintaxis a következő:
 ```
 def example_function(text_to_display):
 	print(text_to_display)
+
 example_function("Hello world!")
 ```
 A kimenet:
@@ -26,42 +27,63 @@ A kimenet:
 A `def` kulcsszót a függvény neve követi, majd zárójelben a függvény argumentuma(i). Ezt a
 sort szintén kettősponttal zárjuk, majd egy tabulátorral behúzva megadjuk, hogy mit is csináljon
 a függvény. A példában kiíratjuk az argumentumot. (Vegyük észre, hogy az argumentumnak
-sincs típusa!) A függvényt a negyedik sorban használjuk, aminek az eredménye az
+sincs típusa!) A függvényt a harmadik sorban használjuk, aminek az eredménye az
 argumentumba írt szöveg megjelenése a terminálon.
+
 Természetesen egy függvénynek nem csak egy argumentuma lehet:
+```
 def example_function(text_to_display, number1_to_add, number2_to_add):
-print(text_to_display)
-print(number1_to_add + number2_to_add)
+	print(text_to_display)
+	print(number1_to_add + number2_to_add)
+
 example_function("Hello world!",1,2)
+```
+A kimenet ekkor:
+```
 > Hello world!
 > 3
+```
 Az, hogy a Python nem erősen típusos nyelv könnyelműségre csábíthat, de vannak szabályok,
-amik ugyanúgy érvényesek, mint a típusos nyelvekben. Ilyen szabály az is, hogy a függvények
+amik ugyanúgy érvényesek, mint a típusos nyelvekben. Ilyen szabály az is, hogy a függvénynek
 pontosan annyi argumentuma kell, hogy legyen, mint amennyivel definiáltuk.
-Ez persze sok hiba forrása lehet, amelynek debuggolása esetleg sok-sok időt emészt fel, ezért
+Ez persze sok hiba forrása lehet, amelynek debuggolása esetleg sok időt emészt fel, ezért
 célszerű határozatlan számú argumentumot használni. Ezt már C/C++ jellegű nyelvekben is
 meg lehetett tenni, ha az argumentum egy tömb vagy vektor. Például:
+```
 def example_function(text_to_display):
-print(text_to_display[0])
-print(text_to_display[1])
-print(text_to_display[4])
+	print(text_to_display[0])
+	print(text_to_display[1])
+	print(text_to_display[4])
+	
 example_text_array = ["a", "b", "C", "d", "e"]
 example_function(example_text_array)
+```
+A kimenet:
+```
 > a
 > b
 > e
+```
 De így is lehet csinálni:
+```
 def add_function( * args ):
-print(args[0]+args[1])
+	print(args[0]+args[1])
+
 example_function(1, 2)
+```
+Ekkor a kimenet:
+```
 > 3
+```
 Az első variáció egy tömböt ad át a függvénynek, aminek a méretéről maga a függvény nem
-tud. A második esetben is hasonló a helyzet azzal a különbséggel, hogy kell egy * szimbólum,
+tud. A második esetben is hasonló a helyzet azzal a különbséggel, hogy kell egy \* szimbólum,
 ami jelöli, hogy az argumentumok száma bizonytalan, de minden bemenő argumentumot
 tegyen be egy args nevű tömbbe. Mindkét esetben közös, hogy a függvény tartalma alapján
 kiderül, hogy legalább hány argumentum van. Az első esetben ez öt, a második esetben kettő.
 Több lehet, kevesebb azért nem, mert akkor a tömb indexek értelmetlenek.
-Kulcsszó argumentumok
+
+
+# Kulcsszó argumentumok
 C/C++ nyelvek esetén zavart okozhat, ha az argumentumokat összekeverjük, Pythonban
 azonban ha keyword, azaz kulcsszó argumentumokat használunk, akkor a sorrend mindegy:
 def example_function(text1, text2):
