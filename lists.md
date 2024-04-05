@@ -148,7 +148,7 @@ pedig tuple-ként.
 A megváltoztathatatlanságból eredő megkötéseken kívül minden ugyanúgy alkalmazható a
 tuple-ök esetén, mint a list-eknél.
 
-# Halmazok avagy set-ek
+# Set-ek
 
 A halmazok olyan tömb típusok, amelyeken nincs rendezés, vagyis elemek gyűjteménye.
 Ennek megfelelően el lehet belőlük elemeket távolítani, hozzájuk is lehet adni, de az indexhez
