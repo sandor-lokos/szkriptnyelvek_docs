@@ -91,7 +91,7 @@ if(not statement):
 ```
 Egy biztos logikai állítás, ha megengedünk egy állítást, illetve a negáltját (tagadottját) is:
 
-````
+```
 statement = False
 if(statement or not statement):
 	print ("Biztosan igaz!")
