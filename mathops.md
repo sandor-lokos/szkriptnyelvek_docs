@@ -3,6 +3,9 @@ operátorok jelentése is bővebb, mint az erősen típusos nyelvekben [1]. Erre
 példát:
 ```
 print("a"*10)
+```
+A kimenet:
+```
 > aaaaaaaaaa
 ```
 egy egész szám, a \* pedig a szorzást jelenti.
@@ -20,6 +23,9 @@ leírást kivéve, ha az, amit le kellene írni szám, mert akkor végezze el a 
 ```
 print("a"*10)
 print(2*10)
+```
+A kimenet:
+```
 > aaaaaaaaaa
 > 20
 ```
@@ -40,6 +46,9 @@ kell bánni:
 ```
 print("aaaa"+"aa")
 print("aaaa"-"aa")
+```
+A kimenet:
+```
 > aaaaaa
 > TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ```
@@ -53,6 +62,9 @@ Lássuk a szintaxist:
 print(10/3)
 print(10//3)
 print(10%3)
+```
+A kimenet:
+```
 > 3.3333333333333335
 > 3
 > 1
@@ -68,6 +80,9 @@ i+=1
 print(i)
 i=+1
 print(i)
+```
+A kimenet:
+```
 > 2
 > 3
 > 1

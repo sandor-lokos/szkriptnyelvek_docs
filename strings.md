@@ -60,9 +60,11 @@ függvény áll rendelkezésre. Az alábbi példa mutatja, hogyan kell használn
 ```
 name = input('Enter Your Name: ')
 print(name)
-
->> Enter Your Name: Steve
->> 'Steve'
+```
+A kimenet:
+```
+> Enter Your Name: Steve
+> 'Steve'
 ```
 
 Ennél fontosabb és elterjedtebb GUI-ról vagy fájlból beolvasni információkat. Utóbbit
@@ -85,7 +87,10 @@ Ezzel létrehoztunk egy f1 nevű objektumot. Írassuk ki:
 ```
 f1 = open("script_1.txt", 'r')
 print(f1)
->> <_io.TextIOWrapper name='script_1.txt' mode='r' encoding='cp1250'>
+```
+A kimenet:
+```
+> <_io.TextIOWrapper name='script_1.txt' mode='r' encoding='cp1250'>
 ```
 
 Ez sokat nem mond egyelőre. Minket jobban érdekel, hogy mi van a fájlban. Ezt az objektumot
