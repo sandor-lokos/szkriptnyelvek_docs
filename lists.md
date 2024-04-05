@@ -113,6 +113,10 @@ for x in list2:
 print(list1)
 ```
 
+## Leképezés listákon
+
+
+
 # Tuple-ök
 
 A tuple egy olyan tömbtípus, amelynek _nem_ tudjuk az elemeit megváltoztatni. A fenti
