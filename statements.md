@@ -7,7 +7,7 @@ Korábban már láttunk példát az ```if``` szerkezetre. Ez egy olyan függvén
 argumentumot vár. Ha az argumentum ```True```, akkor végrehajtja a függvénybeli utasítást, ha
 nem nem. Azt is specifikálhatjuk, hogy mi történjen, ha nem ```True```, azaz ```False``` az argumentum
 az ```else``` kulcsszóval. Általánosan tehát így néz ki a szintaxis:
-```
+```python
 statement = True
 if(statement == True):
 	print("Igaz")
@@ -15,7 +15,7 @@ else:
 	print("Hamis")
 ```
 De egyszerűsíthetjük is a kódot:
-```
+```python
 statement = True
 if(statement):
 	print("Igaz")
@@ -24,7 +24,7 @@ else:
 ```
 Érdemes tudni az ```elif``` elágazási lehetőségről. Ezt akkor használhatjuk, ha több opciót is
 szeretnénk megvizsgálni.
-```
+```python
 i=2
 if( i == 1 ):
 print("i is equal to 1")
@@ -39,7 +39,7 @@ print("i is less then 1")
 Ahogy azt a korábban tanult nyelvekben megszokhattuk, a ```for``` ciklus arra használható, hogy
 egy műveletet többször, egymás után megismételjünk. A Pythonban is ```for```-nak hívják ezt
 a szerkezetet és hasonlóan működik:
-```
+```python
 for i in range(10):
 	print(i)
 ```
@@ -51,7 +51,7 @@ Látszik, hogy az első kettő lehetőség a harmadik speciális esete.
 *Feladat*: írjuk át az első két ```range()``` függvényt „három-argumentumossá”!
 
 Hasonlóan egy tömb elemein is értelmezhető a ciklus:
-```
+```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 for elements in array:
 	print(elements)
@@ -59,14 +59,14 @@ for elements in array:
 (A tömbök használata a következő fejezet témája.)
 
 *Kérdés*: mit kapunk a következő kódrészletből?
-```
+```python
 for elements in "array":
 	print(elements)
 ```
 
 Előfordulhat, hogy nem akarunk az előre megadott range-en végigfutni, csak addig, amíg egy
 feltétel nem teljesül, amikor is szeretnék kilépni a for-ciklusból. Erre való a break kulcsszó:
-```
+```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 for elements in array:
 	if(elements == 4):
@@ -74,7 +74,7 @@ for elements in array:
 	print(elements)
 ```	
 *Kérdés*: Mit kapunk a következő kódból?
-```
+```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 for elements in array:
 	print(elements)
@@ -83,7 +83,7 @@ for elements in array:
 ```
 De az is lehet, hogy egyszerűen csak nem akarjuk figyelembe venni az egyik elemet az
 iterációban. Erre pedig a continue kulcsszó való.
-```
+```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 for elements in array:
 	if(elements == 4):
@@ -91,7 +91,7 @@ for elements in array:
 	print(elements)
 ```
 A ```for```-ciklus egyfajta ```while()``` függvényként is felfogható, így pl. a
-```
+```python
 for i in range(0,3):
 	print(i)
 ```
@@ -99,7 +99,7 @@ Ciklus értelmezhető úgy, hogy „írjuk ki az ```i```-t amíg az a 0-3 range-
 fogalmazunk, akkor értelmezhető az is, hogy ez a feltétel már nem teljesül. Vagyis folytathatjuk
 a mondatot: „range-ben van, és ha ez már nem igaz, akkor pedig írja ki, hogy Finished!”. Ezt
 megtehetjük:
-```
+```python
 for i in range(0,3):
 	print(i)
 else:
@@ -109,7 +109,7 @@ else:
 A ```while``` nagyon hasonló a ```for``` ciklushoz használhatósága tekintetében, de a szintaxis más.
 Úgy is gondolhatunk rá, mint egy ```for```-ciklus – ```if```-statement keverékre. Lássunk egy egyszerű
 példát amiből megértjük a különbségeket:
-```
+```python
 i = 0
 while(i < 6):
 	print(i)
@@ -125,7 +125,7 @@ A ```break``` és ```continue``` kulcsszavak ugyanúgy használhatók, mint a ``
 # Egy furcsa if-statement -- az if(__name__ == __main__) idiom
 
 Sok kódban (github: 12.4 M találat), amit az internet találni előfordul a következő, furcsán kinéző ```if```
-```
+```python
 if __name__ == "__main__":
 ```
 amit elsőre akár a C/C++ nyelvek felől érkezve még egy ```int main()``` jellegű függvénynek is
@@ -134,7 +134,7 @@ nézhetünk, pedig szintaktikailag ez csak egy ```if```.
 Röviden arra való ez a szerkezet, hogy a kódban el tudjuk különiteni azokat a részeket,
 amelyeket szkriptként akarunk futtatni és azokat amelyeket modulként behivni máshol.
 Például:
-```
+```python
 def echo(text, repetitions):
 	echoed_text = ""
 	for i in range(repetitions, 0, -1):
@@ -158,7 +158,7 @@ y
 ```
 
 Ugyanakkor meghivhatjuk ezt a függvényt egy másik fájlból is (ld. később a moduloknál) igy: 
-```
+```python
 from strange_if import echo 
 print(echo("Please help me I'm stuck on a mountain"))
 ```
