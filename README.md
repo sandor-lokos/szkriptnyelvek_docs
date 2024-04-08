@@ -27,6 +27,7 @@ Törzsanyag
 
 Válogatott fejezetek
 * [Párhuzamos programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/parallel.md)
+* [Funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md)
 * [Excel](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md)
 * [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
 * [Matplotlib](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/matplotlib.md)

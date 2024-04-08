@@ -250,6 +250,8 @@ kiválasztani.
 
 # Lambda függvények
 
+A téma a funkcionális programozásról szóló részben lesz feldolgozva.
+
 # A main függvény
 
 Láttuk a vezérlési szerkezeteknél, hogy van egy olyan furcsa `if` szerkezet ami a C/C++ nyelvek `main`
