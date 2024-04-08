@@ -2,7 +2,7 @@ Az életet és a kódok olvashatóságát tovább könnyíti, ha függvényeinke
 külön fájlban, a felhasználó számára nem szembeszökő módon tároljuk. Ezt könnyen
 megvalósíthatjuk és mindössze az `import` kulcsszót kell ismernünk. Az előző osztályos példa
 esetén például a következőképpen járhatunk el:
-- Létrehozunk egy animals.py nevű fájl, amely tartalmazza az osztályok definícióit:
+- Létrehozunk egy `animals.py` nevű fájl, amely tartalmazza az osztályok definícióit:
 	```python
 	class Mammal:
 		def live(self):
