@@ -248,13 +248,21 @@ függvényt is át kell írnunk. Sokkal egyszerűbb és kényelmesebb megoldás 
 megvalósítani és a függvényt adni paraméterként, mint a függvényt egy bool változóval
 kiválasztani.
 
-# A tipusosan definiált függvények
+# A tipusosan definiált függvények (type hints)
 
 Ahogy az első részben láttuk, a függvények definiálása a változókéhoz hasonlóan egyszerű, nem szökséges
 tipusosan történnie. Azonban nagyon hasznos, ha mégis megmondjuk a függvényról, hogy milyen tipust vár
 melyik argumentumában, főleg ha a függvény értelmezése időt venne igénybe.
 
-Ezt a következőképpen lehet megtenni
+Ezt a következőképpen lehet megtenni.
+
+```python
+def height(height: float) -> str:
+    return f'You are {height} cm tall.'
+```
+Ez egy nem túl hasznos függvény, de a [tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)
+jól megfigyelhető rajta, amiről később még lesz szó. Röviden, a függvény argumentumában jelezzük, hogy milyen
+tipusú bemenetet vár a függvény és utána azt is, hogy milyen tipusú lesz a kimenet.
 
 # Lambda függvények
 
@@ -299,8 +307,8 @@ elraktározza, de nem hajtja végre.
 
 <table>
 <tr>
-<th> No function </th>
-<th> With function </th>
+<th> Függvény nélkül </th>
+<th> Függvénnyel </th>
 </tr>
 <tr>
 <td>
@@ -308,7 +316,7 @@ elraktározza, de nem hajtja végre.
 ```python
 from time import sleep
 
-data = [] # defined or given from somewhere
+data = ['data']
 
 print("Beginning data processing...")
 modified_data = data + " that has been modified"
@@ -323,26 +331,122 @@ print("Data processing finished.")
 ```python
 from time import sleep
 
-def process_data(data):
+data = ['data']
+
+def process_data(auxdata):
     print("Beginning data processing...")
-    modified_data = data + " that has been modified"
+    modified_data = auxdata + " that has been modified"
     sleep(3)
     print("Data processing finished.")
     return modified_data
+	
+# process_data(data)
 ```
 
 </td>
 </tr>
 </table>
 
+A függvény nélküli esetben az egész kód lefut, ahogy van. A jobb oldalon lévő kódot lefuttatva viszont
+semmit nem kapunk vissza. A függvényt meg kell hivni ahhoz, hogy történjen valami. Ehhez távolitsuk el a
+\# jelet az utolsó sorból.
+
 
 ### Kód futtatásának kontrolja
 
+Ahogy azt már láttuk a furcsa if-nél, a `if __name__ == "__main__"` lehetővé teszi, hogy a kód futtatási
+kontextusát megadjuk. Ami ebben az `if`-ben van, az csak akkor fut le, ha a kódot szkriptként futtatjuk.
+ha például módositjuk a fenti függvényes kódot igy
+```python
+from time import sleep
+
+def process_data(auxdata):
+    print("Beginning data processing...")
+    modified_data = auxdata + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
+	
+if __name__ == "__main__":
+    data = "My data read from the Web"
+    print(data)
+    modified_data = process_data(data)
+    print(modified_data)
+```
+
+akkor hiába importáljuk be a fájlt, az `if`-ben lévő rész nem fog lefutni.
+
+
 ### A `main()` definiálása
+
+A legtöbb nyelvben van egy speciális függvény, amit `main()`-nek hivnak, és mindig lefut, ez a belépőpont a kódba.
+Pythonban nincs ilyen és ha valaki mégis akar ilyet definiálni, nem kötelező `main()`-nek hivni, de érdemes.
+
+Érdemes tehát a következőképpen módositani a fenti kódot
+```python
+from time import sleep
+
+print("This is my file to demonstrate best practices.")
+
+def process_data(data):
+    print("Beginning data processing...")
+    modified_data = data + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
+
+def main():
+    data = "My data read from the Web"
+    print(data)
+    modified_data = process_data(data)
+    print(modified_data)
+
+if __name__ == "__main__":
+    main()
+```
+
+Igy a `main()` máshonnan is használható, mégis megvan a csak szkriptként futtatás lehetősége is. Most már teljesen
+mindegy, hogy szkriptként vagy importként futtatjuk a kódot, ugyanazt a kimenetet kapjuk.
+
 
 ### Függvények hivása a `main()`-ből
 
+Persze sok más függvényünk is lehet, például adat beolvasás és kiirás. Ezeket mind a `main`-ből hivhatjuk
+és akkor mindenki számára világos lesz mi milyen sorrendben történik
+```python
+from time import sleep
 
+print("This is my file to demonstrate best practices.")
+
+def process_data(data):
+    print("Beginning data processing...")
+    modified_data = data + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
+
+def read_data_from_web():
+    print("Reading data from the Web")
+    data = "Data from the web"
+    return data
+
+def write_data_to_database(data):
+    print("Writing data to a database")
+    print(data)
+
+def main():
+    data = read_data_from_web()
+    modified_data = process_data(data)
+    write_data_to_database(modified_data)
+
+if __name__ == "__main__":
+    main()
+```
+
+Elég csak a `main()`-re pillantani és látjuk, hogy először beolvasunk adatokat a webról, majd módositjuk
+és végül kiirjuk. Azt, hogy ez pontosan hogyan is történik, a függvények implementálását ellenőrizve tudhatjuk
+meg, de ez nem feltétlenül érdekel minket, ha csak használni akarjuk a kódot. A lényeg, hogy pusztán a `main()`-ből
+és a jól elnevezett függvényekből tudjuk, hogy mi történik.
 
 
 # Feladatok:

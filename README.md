@@ -32,3 +32,4 @@ Válogatott fejezetek
 * [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
 * [Matplotlib](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/matplotlib.md)
 * [Jupyter notebook](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/jupyter.md)
+* [Tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)
