@@ -11,7 +11,7 @@ Nézzük meg, hogy mi hogyan van implementálva. Ha valakit érdekel a &pi gener
 Jöjjön a kód:
 ```python
 import numpy as np
-
+from decimal import *
 
 class methods:
     def __init__(self):
@@ -42,8 +42,8 @@ class ChudnovskysPi(methods):
 
 
     def ownPi(self):
-        RecPi = np.longdouble(self.sumInt(0, self.acc, self.pifunc))
-        return np.longdouble(1./(12*RecPi))
+        Pi = Decimal(1./(12.*self.sumInt(0, self.acc, self.pifunc)))
+        return Pi
 
 
 class RamanujansPi(methods):
@@ -54,8 +54,8 @@ class RamanujansPi(methods):
 
 
     def ownPi(self):
-        RecPi = np.longdouble(self.sumInt(0, self.acc, self.pifunc))
-        return np.longdouble(99**2/(2*np.sqrt(2)*RecPi))
+        Pi = Decimal(99**2/(2*np.sqrt(2)*self.sumInt(0, self.acc, self.pifunc)))
+        return Pi
 
 
 
