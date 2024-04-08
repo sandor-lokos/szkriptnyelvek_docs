@@ -315,6 +315,7 @@ sleep(3)
 print("Data processing finished.")
 ```
 </td>
+
 <td>
 ```python
 from time import sleep
