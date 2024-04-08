@@ -297,7 +297,7 @@ a kódot, hanem futtatjuk vagy szkriptként vagy importként. Vagyis egy interpr
 a kódunkat sorrol-sorra. Ha viszont az interpreter egy `def` vagy `class` kulcsszót lát, akkor a definiciót
 elraktározza, de nem hajtja végre.
 
--------
+| ------------- | ------------- |
 | `import time` | `import time` | 
 | `dom something` | `dom something` |
 
