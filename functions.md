@@ -14,7 +14,7 @@ A függvényt ugyanúgy hívjuk meg, mint a legtöbb programnyelven, a függvén
 megadva a megfelelő argumentumait. (Mindez bizonyára nem ismeretlen, hisz eddig is
 használtunk függvényeket, csak nem olyanokat, amelyeket mi definiáltunk.)
 Tehát a szintaxis a következő:
-```
+```python
 def example_function(text_to_display):
 	print(text_to_display)
 
@@ -31,7 +31,7 @@ sincs típusa!) A függvényt a harmadik sorban használjuk, aminek az eredmény
 argumentumba írt szöveg megjelenése a terminálon.
 
 Természetesen egy függvénynek nem csak egy argumentuma lehet:
-```
+```python
 def example_function(text_to_display, number1_to_add, number2_to_add):
 	print(text_to_display)
 	print(number1_to_add + number2_to_add)
@@ -49,7 +49,7 @@ pontosan annyi argumentuma kell, hogy legyen, mint amennyivel definiáltuk.
 Ez persze sok hiba forrása lehet, amelynek debuggolása esetleg sok időt emészt fel, ezért
 célszerű határozatlan számú argumentumot használni. Ezt már C/C++ jellegű nyelvekben is
 meg lehetett tenni, ha az argumentum egy tömb vagy vektor. Például:
-```
+```python
 def example_function(text_to_display):
 	print(text_to_display[0])
 	print(text_to_display[1])
@@ -65,7 +65,7 @@ A kimenet:
 > e
 ```
 De így is lehet csinálni:
-```
+```python
 def add_function( * args ):
 	print(args[0]+args[1])
 
@@ -88,7 +88,7 @@ Több lehet, kevesebb azért nem, mert akkor a tömb indexek értelmetlenek.
 C/C++ nyelvek esetén zavart okozhat, ha az argumentumokat összekeverjük, Pythonban
 azonban ha keyword, azaz kulcsszó argumentumokat használunk, akkor a sorrend mindegy:
 
-```
+```python
 def example_function(text1, text2):
 	print(text1 + "\t" + text2)
 example_function(text1="Hello world!", text2="Hello again!")
@@ -101,7 +101,7 @@ A kimenet:
 ```
 Ezt akkor is megtehetjük, ha a fent bemutatott, tetszőleges számú argumentumos szintaxist
 használjuk:
-```
+```python
 def example_function(**kwargs):
 	print(kwargs["text1"] + "\t" + kwargs["text2"])
 example_function(text1="Hello world!", text2="Hello again!")
@@ -117,7 +117,7 @@ A `**kwargs` tehát egyfajta [dictionary](https://github.com/sandor-lokos/szkrip
 lehetőséget, mert sok előre megírt csomag esetén találkozhatunk ezzel a megoldással.
 A kulcsszó argumentumok arra is használhatóak, hogy alapértelmezett értéket állítsunk be a
 függvény egy paraméterének:
-```
+```python
 def example_function(text_to_display="Empty"):
 	print(text_to_display)
 example_function()
@@ -130,7 +130,7 @@ A kimenet ekkor:
 ```
 Ahogy azt szintén megszokhattuk, nem csak a `print()` függvénnyel kaphatunk vissza értékeket a
 függvényekből, hanem a `return` kulcsszóval is.
-```
+```python
 def multiplication(number1,number2):
 	return number1*number2
 result = multiplication(2,2)
@@ -138,7 +138,7 @@ print(result)
 ```
 Kényelmes megoldás, hogy egyszerre akár több értéket is visszatéríthetünk különösebb
 trükközés nélkül:
-```
+```python
 def multiplication(number1,number2):
 	return number1*number2, number1, number2
 
@@ -148,7 +148,7 @@ print(result, num1, num2)
 A harmadik sorban a sorrendet be kell tartani! A függvények esetén is használható a `pass`
 kulcsszó. Ez akkor lehet hasznos, ha egy függvényt még nem írtunk meg, de definiálni már
 definiáltuk:
-```
+```python
 def myfunc():
 	pass
 ```
@@ -168,7 +168,7 @@ kiszámítása:
 vagyis: 4! = 4 ⋅ 3 ⋅ 2 ⋅ 1
 
 Ezt Pythonban a következőképpen írhatjuk:
-```
+```python
 def factorial(n):
 	if n == 0:
 		return 1
@@ -182,7 +182,7 @@ A kimenet pedig:
 > 24
 ```
 A függvényeknek ezt a tulajdonságát használhatjuk például keresésre egy listában:
-```
+```python
 def recursive_search(array,i,pattern):
 	if(array[i] == pattern):
 		return True
@@ -202,7 +202,7 @@ else:
 
 Nagyon hasznos lehet, egy függvényt függvény argumentummal definiálni. Általában
 bonyolultabb problémák esetén érdemes alkalmazni. Előre definiált függvények esetén egyszerűen látható:
-```
+```python
 def shout(text):
 	return text.upper()
 	
@@ -227,22 +227,20 @@ vissza. Ezeket a függvényeket az üdvözlő (`greet`) függvényben használha
 Egy az egyben is beírhattuk volna a `shout` és a `whisper` függvényeket a `greet` függvény
 argumentumába, például így:
 ```python
-{
-	def shout(text):
-		return text.upper()
-	def whisper(text):
-		return text.lower()
-		
-	def greet(isShout,text):
-		if(isShout):
-			greeting = shout(text)
-		else:
-			greeting = whisper(text)
-		print(greeting)
-		
-	greet(True,"Hi")
-	greet(False,"Hi")
-}
+def shout(text):
+	return text.upper()
+def whisper(text):
+	return text.lower()
+	
+def greet(isShout,text):
+	if(isShout):
+		greeting = shout(text)
+	else:
+		greeting = whisper(text)
+	print(greeting)
+	
+greet(True,"Hi")
+greet(False,"Hi")
 ```
 A kimenet ugyanaz lesz. De mi a helyzet akkor, ha egy `stutter` függvényt is szeretnék
 definiálni? Akkor nem csak a függvény implementálását kell megoldanunk, de a greet
@@ -301,31 +299,32 @@ elraktározza, de nem hajtja végre.
 
 <table>
 <tr>
-<th>Json 1</th>
-<th>Markdown</th>
+<th> No function </th>
+<th> With function </th>
 </tr>
 <tr>
 <td>
-  
-```json
-{
-  "id": 1,
-  "username": "joe",
-  "email": "joe@example.com",
-  "order_id": "3544fc0"
-}
+```python
+from time import sleep
+
+data = [] # defined or given from somewhere
+
+print("Beginning data processing...")
+modified_data = data + " that has been modified"
+sleep(3)
+print("Data processing finished.")
 ```
-  
 </td>
 <td>
+```python
+from time import sleep
 
-```json
-{
-  "id": 5,
-  "username": "mary",
-  "email": "mary@example.com",
-  "order_id": "f7177da"
-}
+def process_data(data):
+    print("Beginning data processing...")
+    modified_data = data + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
 ```
 
 </td>
