@@ -113,10 +113,6 @@ for x in list2:
 print(list1)
 ```
 
-## Leképezés listákon
-
-
-
 # Tuple-ök
 
 A tuple egy olyan tömbtípus, amelynek _nem_ tudjuk az elemeit megváltoztatni. A fenti
@@ -289,13 +285,44 @@ print(thisdict)
 
 A dictionary-k esetén használható összes függvényekről egy lista [itt]( https://www.w3schools.com/python/python_dictionaries.asp) található.
 
+
+## Leképezés listákon
+
+Listákat le is lehet képezni ami egy hasznos eljárás listák átalakitására az eredeti megtartása mellett, iletve
+akár szűrésre is használható. Persze ezek elérhetőek lennének standard `for` ciklussal is, és a leképezés is
+egy ilyen ciklus, csak a szinteaxis kompaktabb.
+
+Például: hozzunk létre egy listát, ami az eredeti lista számainak a négyzetét tartalmazza. A standard kód:
+```
+array = [1, 2, 3, 4, 5]
+new_array = []
+for i in range(len(array)):
+	new_array.appen(array[i]**2)
+```
+Ehelyett irhatjuk egyszerűen:
+```
+array = [1, 2, 3, 4, 5]
+new_array = [i**2 for i in array]
+```
+Feleannyi sor kód, felennyi hibalehetőség.
+
+
 # Feladatok:
 - Írjunk a remove() függvény segítségével olyan kódot, ami helyettesítené a discard() függvényt!
 - Írjunk egy programot, ami összegzi egy lista elemeit!
 - Írjunk olyan programot, amelyik megtalálja egy lista vagy tuple legnagyobb elemét
 - Írjunk olyan programot, amelyik megszámolja egy listában az olyan stringeket, amelyeknek az első és az utolsó karaktere azonos. Legyen a lista a következő:  ```x = ["1211" , "abcdae" , "xyz" , "abba", "11", "ffgtt"]``` . A várt eredmény: 3.
 - Írjunk olyan programot, amely eltávolítja egy listából a duplumokat. Pl.: 
+- Működne a leképezés tuple-ök, set-ek és dictionary-k esetén is?
 ```x=[1, 2, 3, 4, 4, 5, 6, 7, 8, 8, 1, 2]``` -> ```y=[1, 2, 3, 4, 5, 6, 7, 8]```. (Segítség: használjuk ki a halmazok azon tulajdonságát, hogy nem tartalmazhatnak duplumot.)
+- Össze is lehet dictionary-ket olvasztani (merge). Próbáljuk ki és foglaljuk össze a tapasztalatainkat. A szintaxis a következő:
+```
+x = {'a' : 1, 'b' : 2 }
+y = {'b' : 3, 'c' : 4 }
+
+z = { **x, **y }
+print(z)
+```
 - Készítsünk telefonkönyvet! Olvassunk be egy nevet, majd egy telefonszámot. Ezt ismételjük meg 5 név – telefonszám párra és rendezzük ezeket egy dictionary-ba. Írassuk ki a teljes telefonkönyvet!
 
 ## Beadható feladat:

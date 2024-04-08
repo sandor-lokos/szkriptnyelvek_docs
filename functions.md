@@ -248,9 +248,17 @@ függvényt is át kell írnunk. Sokkal egyszerűbb és kényelmesebb megoldás 
 megvalósítani és a függvényt adni paraméterként, mint a függvényt egy bool változóval
 kiválasztani.
 
+# A tipusosan definiált függvények
+
+Ahogy az első részben láttuk, a függvények definiálása a változókéhoz hasonlóan egyszerű, nem szökséges
+tipusosan történnie. Azonban nagyon hasznos, ha mégis megmondjuk a függvényról, hogy milyen tipust vár
+melyik argumentumában, főleg ha a függvény értelmezése időt venne igénybe.
+
+Ezt a következőképpen lehet megtenni
+
 # Lambda függvények
 
-A téma a funkcionális programozásról szóló részben lesz feldolgozva.
+A téma a [funkcionális programozásról](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md) szóló részben lesz feldolgozva.
 
 # A main függvény
 
@@ -260,15 +268,48 @@ függvényére emlékeztet. Ott láttuk, hogy egészen másról van szó. Azonba
 
 ## A main szerepe
 
+A legtöbb programnyelvnek van egy speciális függvénye, a `main`, amit az operációs rendszer automatikusan meghiv,
+amikor a programot futtatjuk; ennek a függvénynek az argumentumai és a visszatérési értéke nyelvspecifikus.
+Ahogy az már eddig kiderült, a Python nem hajt végre semmilyen függvényt automatikusan. Ez volt az egyik
+lényeges pont, amikor a [furcsa if](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/statements.md#egy-furcsa-if-statement----az-ifname--main-idiom)-et tárgyaltuk.
+Itt megbeszéltük a Python kódok kétféle futtatási módját: szkriptként, importként.
+
+Ugyanakkor hasznos, ha tudjuk, hogy hol kezdődik a programunk, hol az *entry point*. Nézzük tehát meg hogyan
+és mikor érdemes definiálni `main` függvényt.
+
 ## A main definiálása
 
-# A tipusosan definiált függvények
+Természetesen ami nem kötelező, az izlés dolga. Viszont ha egy nyelvet elég sokan használnak, kialakulnak
+konvenciók/best practice-ek, amiket érdemes követni.
 
-Ahogy az első részben láttuk, a függvények definiálása a változókéhoz hasonlóan egyszerű, nem szökséges
-tipusosan történnie. Azonban nagyon hasznos, ha mégis megmondjuk a függvényról, hogy milyen tipust vár
-melyik argumentumában, főleg ha a függvény értelmezése időt venne igénybe.
+A Python esetében kialakult best practice 4 pontban összefoglalható:
+- Amit csak lehet szervezzünk osztályokba, függvényekbe
+- Használjuk a `__name__`-et a kód futtatásának kontroljára és ne `main`-ként.
+- Definiáljunk egy konkrét `main()` függvényt, ami tartalmazza azt a kódot, amit futtatni akarunk
+- Hivjuk a függvényeket a `main()`-ben
 
-Ezt a következőképpen lehet megtenni
+Lássuk ezeet részletesen is.
+
+### Osztályokba és függvényekben szervezés
+
+Az objektum orientál programozás alapelve. Python esetén különösen fontos, mert alapesetben nem forditjuk le
+a kódot, hanem futtatjuk vagy szkriptként vagy importként. Vagyis egy interpreter kezd el futni, ami értelmezi
+a kódunkat sorrol-sorra. Ha viszont az interpreter egy `def` vagy `class` kulcsszót lát, akkor a definiciót
+elraktározza, de nem hajtja végre.
+
+-------
+| `import time` | `import time` | 
+| `dom something` | `dom something` |
+
+
+### Kód futtatásának kontrolja
+
+### A `main()` definiálása
+
+### Függvények hivása a `main()`-ből
+
+
+
 
 # Feladatok:
 - Módosítsa úgy az add_function-t, hogy az argumentumába írt tetszőleges mennyiségű számot összeadja és az eredményt kiírja a terminálra. (Pl. add_function(1, 2, 3, 4) írja ki, hogy 10.
