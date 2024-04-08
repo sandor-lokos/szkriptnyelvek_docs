@@ -304,6 +304,7 @@ elraktározza, de nem hajtja végre.
 </tr>
 <tr>
 <td>
+
 ```python
 from time import sleep
 
@@ -314,9 +315,11 @@ modified_data = data + " that has been modified"
 sleep(3)
 print("Data processing finished.")
 ```
+
 </td>
 
 <td>
+
 ```python
 from time import sleep
 
