@@ -7,7 +7,7 @@ lista egy a négy tömb típus közül a Pythonban. Ezeket fogjuk ebben a részb
 Kezdjük azzal a típussal, amivel már találkoztunk. A lista egy olyan tömb típus a Pythonban,
 ami rendezett, változtatható és megengedi, hogy egy elem kétszer is szerepeljen. Példát ilyen
 listára már sokat láttunk, de azért felsorolunk néhányat.
-```
+```python
 example_list1 = ["a", "b", "c"]
 example_list2 = "abc"
 example_list3 = [1,2,3,4]
@@ -33,7 +33,7 @@ Tekintsük át a fontosabbakat:
 - ```pop()```: eltávolítja az argumentumában lévő indexnek megfelelő elemet
 - ```sort()```: sorrendbe állítja az elemeket ABC vagy növekvő érték szerint (opcionális ```key```-argumentumokkal fordított sorrend is lehetséges)
 Most lássunk egy-egy példát ezekre:
-```
+```python
 example_list = ["A",1,3,5,7,9,2,4,6,8,"B"]
 print(len(example_list))
 ```
@@ -41,14 +41,14 @@ A kimenet:
 ```
 > 11
 ```
-```
+```python
 print(example_list)
 ```
 A kimenet:
 ```
 > ['A', 1, 3, 5, 7, 9, 2, 4, 6, 8, 'B']
 ```
-```
+```python
 example_list.append(11)
 example_list.insert(10,10)
 print(example_list)
@@ -57,7 +57,7 @@ A kimenet:
 ```
 > ['A', 1, 3, 5, 7, 9, 2, 4, 6, 8, 10, 'B', 11]
 ```
-```
+```python
 example_list.remove("A")
 index_of_B = example_list.index("B")
 example_list.pop(index_of_B)
@@ -67,7 +67,7 @@ A kimenet:
 ```
 > [1, 3, 5, 7, 9, 2, 4, 6, 8, 10, 11]
 ```
-```
+```python
 example_list.sort()
 print(example_list)
 ```
@@ -75,7 +75,7 @@ A kimenet:
 ```
 > [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
-```
+```python
 example_list.sort(reverse=True)
 print(example_list)
 ```
@@ -85,7 +85,7 @@ A kimenet:
 ```
 Egyszerű, de hasznos és szintaktikailag egyszerű funkciók sora érhető el listákhoz, melyek
 közül jónéhánnyal már találkoztunk, így itt csak példa szintjén említjük:
-```
+```python
 example_list = ["apple", "banana", "cherry"]
 # loop on a list
 for x in example_list:
@@ -118,12 +118,12 @@ print(list1)
 A tuple egy olyan tömbtípus, amelynek _nem_ tudjuk az elemeit megváltoztatni. A fenti
 függvények ugyan nem használhatóak, mivel azok mind valamilyen változást idéznek elő, de
 az index műveletek ugyanúgy működnek, mint ahogy azt megszoktuk:
-```
+```python
 thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 print(thistuple[2:-1])
 ```
 Természetesen van mód a tuple tartalmának megváltoztatására, de csak közvetett módszerrel:
-```
+```python
 x = ("1", "2", "3")
 print(x)
 ```
@@ -131,7 +131,7 @@ A kimenet:
 ```
 > ('1', '2', '3')
 ```
-```
+```python
 y = list(x)
 y[1] = "3"
 x = tuple(y)
@@ -153,7 +153,7 @@ tuple-ök esetén, mint a list-eknél.
 A halmazok olyan tömb típusok, amelyeken nincs rendezés, vagyis elemek gyűjteménye.
 Ennek megfelelően el lehet belőlük elemeket távolítani, hozzájuk is lehet adni, de az indexhez
 kapcsolódó műveleteknek nincs értelmük. Nézzünk néhány példát:
-```
+```python
 example_set = {"A", "B", "C"}
 example_set.add("D")
 example_set.update(["E", "F", "G"])
@@ -179,7 +179,7 @@ teljes listája megtalálható [itt](https://www.w3schools.com/python/python_set
 
 A dictionary Pythonban leginkább a C/C++-os ```struct```-hoz hasonló, általában különböző típusú
 változók rendezett és változtatható tartalmú tömbje.
-```
+```python
 thisdict = {
 "brand": "Ford",
 "model": "Mustang",
@@ -193,21 +193,21 @@ A kimenet:
 ```
 Elemekhez hozzáférni úgy lehet, mint a listák esetén, de index helyett a kulcsszavakat lehet
 használni:
-```
+```python
 print(thisdict.get("model"))
 ```
 A kimenet:
 ```
 > Mustang
 ```
-```
+```python
 print(thisdict["model"])
 ```
 
 ```
 > Mustang
 ```
-```
+```python
 thisdict["year"] = 2018
 print(thisdict.get("year"))
 ```
@@ -216,7 +216,7 @@ print(thisdict.get("year"))
 > 2018
 ```
 A ```for``` looppal a kulcsszavakat és az azokhoz tartozó értékeket is elérhetjük:
-```
+```python
 for x in thisdict:
 	print(str(x) + ": " + str(thisdict[x]))
 ```
@@ -228,7 +228,7 @@ for x in thisdict:
 ```
 Figyeljünk fel a szintaxisbeli különbségre!
 Az egyértelműség kedvéért használhatjuk a ```values()``` és az ```items()``` kulcsszavakat.
-```
+```python
 for x in thisdict.values():
 	print(x)
 ```
@@ -238,7 +238,7 @@ for x in thisdict.values():
 > Mustang
 > 2018
 ```
-```
+```python
 for x, y in thisdict.items():
 	print(x, y)
 ```
@@ -250,7 +250,7 @@ for x, y in thisdict.items():
 ```
 
 Ellenőrizhetjük, hogy létezik-e egy adott kulcsszó, illetve újakat is definiálhatunk:
-```
+```python
 if "model" in thisdict:
 	print("Yes, 'model' is one of the keys in the thisdict dictionary")
 if "color" not in thisdict:
@@ -266,7 +266,7 @@ print(thisdict)
 Törölni több függvénnyel is lehet. Ezek közül az egyik a ```del```, amivel azonban vigyázni kell,
 mert az egész dictionary-t ki tudja törölni:
 
-```
+```python
 del thisdict["model"]
 print(thisdict)
 ```
@@ -274,7 +274,7 @@ print(thisdict)
 ```
 > {'brand': 'Ford', 'year': 1964, 'color': 'red'}
 ```
-```
+```python
 del thisdict
 print(thisdict)
 ```
@@ -293,14 +293,14 @@ akár szűrésre is használható. Persze ezek elérhetőek lennének standard `
 egy ilyen ciklus, csak a szinteaxis kompaktabb.
 
 Például: hozzunk létre egy listát, ami az eredeti lista számainak a négyzetét tartalmazza. A standard kód:
-```
+```python
 array = [1, 2, 3, 4, 5]
 new_array = []
 for i in range(len(array)):
 	new_array.appen(array[i]**2)
 ```
 Ehelyett irhatjuk egyszerűen:
-```
+```python
 array = [1, 2, 3, 4, 5]
 new_array = [i**2 for i in array]
 ```
@@ -316,7 +316,7 @@ Feleannyi sor kód, felennyi hibalehetőség.
 - Működne a leképezés tuple-ök, set-ek és dictionary-k esetén is?
 ```x=[1, 2, 3, 4, 4, 5, 6, 7, 8, 8, 1, 2]``` -> ```y=[1, 2, 3, 4, 5, 6, 7, 8]```. (Segítség: használjuk ki a halmazok azon tulajdonságát, hogy nem tartalmazhatnak duplumot.)
 - Össze is lehet dictionary-ket olvasztani (merge). Próbáljuk ki és foglaljuk össze a tapasztalatainkat. A szintaxis a következő:
-```
+```python
 x = {'a' : 1, 'b' : 2 }
 y = {'b' : 3, 'c' : 4 }
 

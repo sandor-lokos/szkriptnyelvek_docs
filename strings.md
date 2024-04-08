@@ -1,7 +1,7 @@
 # Stringek és műveleteik
 
 A Pythonban alapesetben minden karakterlánc string-ként van értelmezve. Egy karakter egy string, de egy karakterlánc is string. Egy karakterlánc string-ek tömbjeként is felfogható:
-```
+```python
 msg = 'Triple quotes to write multiple line messages'
 print(msg[0]+msg[1])
 print(msg[0]+msg[1]+msg[2]+msg[3]+msg[4]+msg[5])
@@ -11,7 +11,7 @@ A példa kimenetének az első sora „Tr”, a második „Triple”, a harmadi
 
 Kereshetünk is string-ekben betűket vagy töredékeket:
 
-```
+```python
 text = "Example text here"
 print(text.find('E'))
 print(text.find('e')) # There are more. The first will be returned
@@ -23,7 +23,7 @@ Utóbbi függvényt (```len()```) azért is érdemes megjegyezni, mert nem a str
 vissza valójában hanem a tömb hosszúságát, amit jelen esetben a text string jelent.
 Adhatunk meg formázott string-eket is:
 
-```
+```python
 first_name = "John"
 last_name = "Doe"
 message = first_name + " [" + last_name + "] is a coder"
@@ -36,7 +36,7 @@ A gyakorlat szempontjából a legfontosabb string-függvények talán azok, amel
 manipulálni is képesek vagy bonyolultabb ellenőrzéseket tudnak végrehajtani rajtuk. A
 teljesség igénye nélkül lássunk párat ezek közül:
 
-```
+```python
 isalpha()
 isalnum()
 islower()
@@ -57,7 +57,7 @@ Van lehetőség a felhasználótól adatot bekérni a prompton, bár ez nem egy 
 Kisebb tesztelésre azonban hasznos lehet, ezért megemlitjük. Erre a célra az ```input()``` nevű
 függvény áll rendelkezésre. Az alábbi példa mutatja, hogyan kell használni:
 
-```
+```python
 name = input('Enter Your Name: ')
 print(name)
 ```
@@ -78,13 +78,13 @@ A továbbiakban minden feladat esetén szükségünk lesz fájlok olvasására �
 töltsük le a ```script_1.txt``` fájlt a az e-learning rendszerből. Helyezzük el abba a mappába, amiben
 a kódunk is van és futtassuk a következő parancsot:
 
-```
+```python
 f1 = open("script_1.txt", 'r')
 ```
 
 Ezzel létrehoztunk egy f1 nevű objektumot. Írassuk ki:
 
-```
+```python
 f1 = open("script_1.txt", 'r')
 print(f1)
 ```
@@ -96,7 +96,7 @@ A kimenet:
 Ez sokat nem mond egyelőre. Minket jobban érdekel, hogy mi van a fájlban. Ezt az objektumot
 így lehet olvasni:
 
-```
+```python
 print(f1.readlines())
 ```
 
@@ -105,7 +105,7 @@ is van, az adja a tömb nulladik elemét, az első az elsőt, stb. (Próbálja k
 Hogy tudjuk tehát karakterről karakterre olvasni akkor a fájlt? Emlékezzünk, hogy a Pythonban
 minden string elsőre, s minden string egy tömb. Próbáljuk meg tehát így:
 
-```
+```python
 f1 = open("script_1.txt", 'r')
 lines = f1.readlines()
 line0 = lines[0]
@@ -120,7 +120,7 @@ Ha string részleteket, vagy mintákat keresünk persze ezt az egészet érdemes
 automatizálni, de erről majd a következő utána fejezetben lesz szó. Elöljáróban annyit, amennyi
 a feladatok megoldásához szükséges:
 
-```
+```python
 f1 = open("script_1.txt", 'r')
 for line in f1.readlines():
 print(line[0])
@@ -132,7 +132,7 @@ elemét kiírja. Majd bezárjuk a fájlt. A line tehát kezelhető úgy, mint a 
 A fájlba való kiíratás hasonlóan működik. Ha új fájlt kívánunk létrehozni, akkor a következőt
 csináljuk:
 
-```
+```python
 file1 = open("new_file.txt", "w")
 L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
 file1.write("Hello \n")

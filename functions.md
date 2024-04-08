@@ -264,10 +264,6 @@ Ez egy nem túl hasznos függvény, de a [tipusositás](https://github.com/sando
 jól megfigyelhető rajta, amiről később még lesz szó. Röviden, a függvény argumentumában jelezzük, hogy milyen
 tipusú bemenetet vár a függvény és utána azt is, hogy milyen tipusú lesz a kimenet.
 
-# Lambda függvények
-
-A téma a [funkcionális programozásról](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md) szóló részben lesz feldolgozva.
-
 # A main függvény
 
 Láttuk a vezérlési szerkezeteknél, hogy van egy olyan furcsa `if` szerkezet ami a C/C++ nyelvek `main`

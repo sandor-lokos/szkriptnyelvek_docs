@@ -1,7 +1,7 @@
 A Pythonban alapesetben minden karakterlánc string-ként van értelmezve, így a matematikai
 operátorok jelentése is bővebb, mint az erősen típusos nyelvekben [1]. Erre láttunk korábban
 példát:
-```
+```python
 print("a"*10)
 ```
 A kimenet:
@@ -20,7 +20,7 @@ az összeadást helyettesíti, vagyis azt jelenti, hogy egy számot hányszor eg
 Pythonban a szorzás fogalma szintaktikailag kötetlenebb. A számítógép nem tud a mi
 matematikánkról, az összeadásról sem, így definiálhatjuk úgy, hogy jelentse az egymás után
 leírást kivéve, ha az, amit le kellene írni szám, mert akkor végezze el a matematikai műveletet:
-```
+```python
 print("a"*10)
 print(2*10)
 ```
@@ -34,16 +34,16 @@ jellege, éppen mert minden string, eltér az eddig tanultaktól. Vagyis a szorz
 nem csak a szorzásra, hanem a többi alapműveletre is érvényes, bár a szorzás esetén a
 legnagyobb a különbség. Természetesen a típusosság ezen a ponton már számíthat. Pl. nincs
 értelme a
-```
+```python
 print("aaaa"+10)
 ```
 kifejezésnek, de annak, hogy
-```
+```python
 print("aaaa"+str(10))
 ```
 már van. Az almát a banánnal nem lehet összeadni, de osztani sem. A kivonással is óvatosan
 kell bánni:
-```
+```python
 print("aaaa"+"aa")
 print("aaaa"-"aa")
 ```
@@ -58,7 +58,7 @@ Kiegészítés az osztáshoz: a Pythonban, ahogy a legtöbb nyelvben háromféle
 - int típusok között értelmezett
 - maradékos osztás
 Lássuk a szintaxist:
-```
+```python
 print(10/3)
 print(10//3)
 print(10%3)
@@ -72,7 +72,7 @@ A kimenet:
 *Feladat*: mikor lehet hasznos a második és a harmadik típusú osztás?
 Az itt felsoroltakon kívül több, a szintaxist egyszerűsítő jelölés is van. Egy példa erre a növelő
 operátor:
-```
+```python
 i=1
 i=i+1
 print(i)
@@ -97,7 +97,7 @@ nagyon fontosak [2,3]. Három logikai műveletet értelmezhetünk, melyek a bool
 - tagadás, melyet Pyhonban a ```not``` kulcsszó valósít meg
 
 Lássunk egy példát:
-```
+```python
 statement = False
 if(statement):
 	print ("Igaz")
@@ -106,7 +106,7 @@ if(not statement):
 ```
 Egy biztos logikai állítás, ha megengedünk egy állítást, illetve a negáltját (tagadottját) is:
 
-```
+```python
 statement = False
 if(statement or not statement):
 	print ("Biztosan igaz!")
@@ -116,14 +116,14 @@ if(statement and not statement):
 
 Utóbbi példában a ```statement``` logikai értéke nem számít. Az első ```if``` mindig teljesül, 
 a második soha. Kis kiegészítés az egyenlőségjelekről:
-```
+```python
 i=1
 if(i==1):
 print("i=1")
 ```
 Az első sor az értékadó egyenlőség, a második az összehasonlító egyenlőség. Ilyen összeadó
 operátorok is vannak:
-```
+```python
 i=1
 if( i==1 ):
 	print("i=1")
