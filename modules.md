@@ -4,28 +4,28 @@ megvalósíthatjuk és mindössze az `import` kulcsszót kell ismernünk. Az el�
 esetén például a következőképpen járhatunk el:
 - Létrehozunk egy animals.py nevű fájl, amely tartalmazza az osztályok definícióit:
 	```python
-		class Mammal:
-			def live(self):
-				print("heartbeat")
-		class Pet:
-			def walk(self):
-				print("walk")
-		class Dog(Pet):
-			def bark(self):
-				print("bark")
-		class Cat(Dog, Mammal):
-			pass
+	class Mammal:
+		def live(self):
+			print("heartbeat")
+	class Pet:
+		def walk(self):
+			print("walk")
+	class Dog(Pet):
+		def bark(self):
+			print("bark")
+	class Cat(Dog, Mammal):
+		pass
 	```
 - És létrehozunk egy fájlt, amiben ezeket a függvényeket használjuk:
 	```python
-		import animals
-		cirmi = animals.Cat()
-		morzsi = animals.Dog()
-		morzsi.walk()
-		morzsi.bark()
-		cirmi.walk()
-		cirmi.bark()
-		cirmi.live()
+	import animals
+	cirmi = animals.Cat()
+	morzsi = animals.Dog()
+	morzsi.walk()
+	morzsi.bark()
+	cirmi.walk()
+	cirmi.bark()
+	cirmi.live()
 	```
 	
 Látszik, hogy az osztályokat tartalmazó fájl az import kulcsszóval tudtuk behívni, és a fájl nevét
