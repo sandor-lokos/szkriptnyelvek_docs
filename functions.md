@@ -297,10 +297,38 @@ a kódot, hanem futtatjuk vagy szkriptként vagy importként. Vagyis egy interpr
 a kódunkat sorrol-sorra. Ha viszont az interpreter egy `def` vagy `class` kulcsszót lát, akkor a definiciót
 elraktározza, de nem hajtja végre.
 
-| Header 1 | Header 2 |
-| ------------- | ------------- |
-| `import time` | `import time` | 
-| `dom something` | `dom something` |
+<table>
+<tr>
+<th>Json 1</th>
+<th>Markdown</th>
+</tr>
+<tr>
+<td>
+  
+```json
+{
+  "id": 1,
+  "username": "joe",
+  "email": "joe@example.com",
+  "order_id": "3544fc0"
+}
+```
+  
+</td>
+<td>
+
+```json
+{
+  "id": 5,
+  "username": "mary",
+  "email": "mary@example.com",
+  "order_id": "f7177da"
+}
+```
+
+</td>
+</tr>
+</table>
 
 
 ### Kód futtatásának kontrolja
