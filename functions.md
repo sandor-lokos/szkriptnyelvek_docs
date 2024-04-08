@@ -226,21 +226,23 @@ argumentumot kapnak, egy szöveget, amit csupa nagy vagy csupa kicsi betűvel t�
 vissza. Ezeket a függvényeket az üdvözlő (`greet`) függvényben használhatjuk, mint bemenet.
 Egy az egyben is beírhattuk volna a `shout` és a `whisper` függvényeket a `greet` függvény
 argumentumába, például így:
-```
-def shout(text):
-	return text.upper()
-def whisper(text):
-	return text.lower()
-	
-def greet(isShout,text):
-	if(isShout):
-		greeting = shout(text)
-	else:
-		greeting = whisper(text)
-	print(greeting)
-	
-greet(True,"Hi")
-greet(False,"Hi")
+```python
+{
+	def shout(text):
+		return text.upper()
+	def whisper(text):
+		return text.lower()
+		
+	def greet(isShout,text):
+		if(isShout):
+			greeting = shout(text)
+		else:
+			greeting = whisper(text)
+		print(greeting)
+		
+	greet(True,"Hi")
+	greet(False,"Hi")
+}
 ```
 A kimenet ugyanaz lesz. De mi a helyzet akkor, ha egy `stutter` függvényt is szeretnék
 definiálni? Akkor nem csak a függvény implementálását kell megoldanunk, de a greet
