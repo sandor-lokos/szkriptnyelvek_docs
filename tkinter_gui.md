@@ -227,9 +227,62 @@ window.mainloop()
 
 ## Frame-ek
 
+A `Frame` osztály abban segit, hogy a ne a fenti feladatban tapasztalt módon kelljen a `Label`-ök és
+`Button`-ok helyét meghatároznunk az ablakban. A `Frame`-re a legjobb egyfajta tárolóként, keretként
+gondolni, ami tartalmazza a fent leirt widget-jeinket a megfelelő módon összecsoportositva.
 
+Egy ablakon belül tehát lehet több `Frame` is, sőt, ez a lényeg. Igy lehet a különböző widgeteket
+egymáshoz rendelni. A legegyszerűbb példa
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+frame_a = tk.Frame()
+frame_b = tk.Frame()
+
+label_a = tk.Label(master=frame_a, text="I'm in Frame A")
+label_a.pack()
+
+label_b = tk.Label(master=frame_b, text="I'm in Frame B")
+label_b.pack()
+
+frame_a.pack()
+frame_b.pack()
+
+window.mainloop()
+```
+ahol, bár nem látszik az ablakban és nem is kell, hogy látszódjon, a két `Label` különböző `Frame`-ben
+vannak.
+
+*Feladat*: próbáljuk meg kikommentelni az egyik `Frame` `.pack()` függvényét a `.mainloop()` felett.
+*Feladat*: próbáljuk megcserélni a két `.pack()` sort.
+
+Mind a négy eddig látott widgetnek van `master` attributuma, amivel hozzá lehet rendelni egy `Frame`-hez.
+Egy kicsit lehet a `Frame`-eket szépiteni beépitett effektekkel. Ezek a következők:
+
+| Kód | Hatás |
+| -------------- | ------ |
+| `tk.FLAT`   | Alapeset |
+| `tk.SUNKEN` | Besüllyesztett hatás |
+| `tk.RAISED` | Megemelt hatás  |
+| `tk.GROOVE` | Nútolt szélek |
+| `tk.RIDGE`  | Kiálló szélek |
+
+Az ebben a részben áttekintett widgetek a Tkinter GUI alapegységei, amelyekből felépithetjük az
+felületünket.
 
 # Megjelenés beállitásai a Geometry manager-rel
+
+Ebben a fejezetben a `Frame`-ek elhelyezését fogjuk áttekinteni. Az előző részben már találkoztunk egy
+`Geomtery manager`-rel, ez volt a `.pack()`, igy ezzel fogjuk kezdeni.
+
+## A `.pack()`
+
+## A `.place()`
+
+## A `.grid()`
+
 
 # Interaktivitás
 
