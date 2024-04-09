@@ -229,7 +229,7 @@ window.mainloop()
 
 
 
-# Megjelenés beállitásai a Geomterz manager-rel
+# Megjelenés beállitásai a Geometry manager-rel
 
 # Interaktivitás
 
