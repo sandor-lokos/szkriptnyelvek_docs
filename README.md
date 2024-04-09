@@ -34,6 +34,13 @@ Törzsanyag
 Válogatott fejezetek
 * [Párhuzamos programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/parallel.md)
 * [Funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md)
+	- [Mi a funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#mi-a-funkcion%C3%A1lis-programoz%C3%A1s)
+	- [Mennyire támogatja a Python a funckionális programozást?](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#mennyire-t%C3%A1mogatja-a-python-a-funckion%C3%A1lis-programoz%C3%A1st)
+	- [A `lambda` függvény](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#a-lambda-f%C3%BCggv%C3%A9ny)
+	- [Függvényalkalmazás iterálható objektumokra, a `map()`](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#f%C3%BCggv%C3%A9nyalkalmaz%C3%A1s-iter%C3%A1lhat%C3%B3-objektumokra-a-map)
+	- [Elemek válogatása iterálható objektumokból, a `filter()`]()
+	- [Egy iterálható objektumok redukciója egy értékre, a `reduce()`]()
+	
 * [Excel](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md)
 	- [Létrehozés, értékadás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#l%C3%A9trehoz%C3%A1s-cella-%C3%A9rt%C3%A9kad%C3%A1s)
 	- [Betöltés, ábrázolás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#bet%C3%B6lt%C3%A9s-%C3%A9s-%C3%A1br%C3%A1zol%C3%A1s)

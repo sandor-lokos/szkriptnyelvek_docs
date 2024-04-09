@@ -173,3 +173,7 @@ list(map(f, [1, 2, 3], [10, 20, 30], [100, 200, 300]))
 ```
 ![](map_with_multiple_iterable.png)
 
+
+# Elemek válogatása iterálható objektumokból, a `filter()`
+
+# Egy iterálható objektumok redukciója egy értékre, a `reduce()`
