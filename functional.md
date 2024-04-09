@@ -14,7 +14,7 @@ A funkcionális paradigma előnyei, hogy
 - átlátható, mert csak pure function-öket használ,
 - párhuzamositható, megintcsak azért, mert pure function-ök nem okoznak olyan mellékhatásokat, amelyek ezt megnehezitenék.
 
-# Mennyire támogatja a Python a funckionális programozást?
+# Mennyire támogatja a Python a funkcionális programozást?
 
 Ahhoz, hogy a funckionális programozás támogatott legyen egy nyelvben, a függvényeknek két tulajdonsággal
 kell birjanak:

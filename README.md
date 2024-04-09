@@ -35,7 +35,7 @@ Válogatott fejezetek
 * [Párhuzamos programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/parallel.md)
 * [Funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md)
 	- [Mi a funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#mi-a-funkcion%C3%A1lis-programoz%C3%A1s)
-	- [Mennyire támogatja a Python a funckionális programozást?](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#mennyire-t%C3%A1mogatja-a-python-a-funckion%C3%A1lis-programoz%C3%A1st)
+	- [Mennyire támogatja a Python a funkcionális programozást?](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#mennyire-t%C3%A1mogatja-a-python-a-funckion%C3%A1lis-programoz%C3%A1st)
 	- [A `lambda` függvény](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#a-lambda-f%C3%BCggv%C3%A9ny)
 	- [Függvényalkalmazás iterálható objektumokra, a `map()`](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#f%C3%BCggv%C3%A9nyalkalmaz%C3%A1s-iter%C3%A1lhat%C3%B3-objektumokra-a-map)
 	- [Elemek válogatása iterálható objektumokból, a `filter()`](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md#elemek-v%C3%A1logat%C3%A1sa-iter%C3%A1lhat%C3%B3-objektumokb%C3%B3l-a-filter)
