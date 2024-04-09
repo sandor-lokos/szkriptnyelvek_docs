@@ -279,12 +279,302 @@ Ebben a fejezetben a `Frame`-ek elhelyezését fogjuk áttekinteni. Az előző r
 
 ## A `.pack()`
 
+A `.pack()` metódus egy algoritmus ami meghatározott sorrendben elhelyezi a widgeteket a `Frame`-ben
+vagy az ablakban. Két fő lépésből áll
+1. Kiszámolja mekkora terület kell ahhoz, hogy a widget elférjen, és a fent maradó területet üres
+hellyel tölti fel.
+2. Elhelyezi a widgetet a terület közepén, hacsak nincs más hely specifikálva. (Ezért került a "Name"
+a korábbi példában automatikusan középre.)
+
+Lássuk ezeket egy egyszerű példán:
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+frame1 = tk.Frame(master=window, width=100, height=100, bg="red")
+frame1.pack()
+
+frame2 = tk.Frame(master=window, width=50, height=50, bg="white")
+frame2.pack()
+
+frame3 = tk.Frame(master=window, width=25, height=25, bg="green")
+frame3.pack()
+
+window.mainloop()
+```
+Ki is lehet tölteni az egész `Frame`-et az X irányba a `fill` kulcsszó argumentummal: `pack(fill=tk.X)`,
+s igy nincs értelme megadni a `width` kulcsszót:
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+frame1 = tk.Frame(master=window, height=100, bg="red")
+frame1.pack(fill=tk.X)
+
+frame2 = tk.Frame(master=window, height=50, bg="white")
+frame2.pack(fill=tk.X)
+
+frame3 = tk.Frame(master=window, height=25, bg="green")
+frame3.pack(fill=tk.X)
+
+window.mainloop()
+```
+AAz is beállitható, hogy melyik oldalra kivanjuk igazitani a widgetet a `side` kulcsszó argumentummal.
+Négy opció lehetséges:
+- `tk.TOP`
+- `tk.BOTTOM`
+- `tk.LEFT`
+- `tk.RIGHT`
+Az alapértelmezett a `tk.TOP`. Az alábbi kódban még azt is kikötöttük, hogy Z irányban legyen folytonos
+a kitöltés:
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+frame1 = tk.Frame(master=window, width=200, height=100, bg="red")
+frame1.pack(fill=tk.Y, side=tk.LEFT)
+
+frame2 = tk.Frame(master=window, width=100, bg="white")
+frame2.pack(fill=tk.Y, side=tk.LEFT)
+
+frame3 = tk.Frame(master=window, width=50, bg="green")
+frame3.pack(fill=tk.Y, side=tk.LEFT)
+
+window.mainloop()
+```
+*Feladat*: teszteljük, hogy mi történik az ablak átméretezésekor.
+
+A `fill=tk.BOTH` beállitással az X és az Y irányt egyszerre lehet kitölteni.
+
 ## A `.place()`
+
+Ha pontosan szeretnénk megadni, hogy hova kerüljön a widget, akkor a `.place()`-t használjuk.
+A következő példán látható a szintaxis
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+frame = tk.Frame(master=window, width=150, height=150)
+frame.pack()
+
+label1 = tk.Label(master=frame, text="I'm at (0, 0)", bg="red")
+label1.place(x=0, y=0)
+
+label2 = tk.Label(master=frame, text="I'm at (75, 75)", bg="green")
+label2.place(x=75, y=75)
+
+window.mainloop()
+```
+A manualitása és bizonyos fokú rendszerfüggősége miatt a `.place()` elég ritkán hasznos.
 
 ## A `.grid()`
 
+ha sok widgetünk van, általában hasznos valamilyen négyzetrácsos mintába, gridbe rendezni őket.
+A `.grid()` pont erre van, miközben a `.pack()` összes tulajdonságával is bir.
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+for i in range(3):
+    for j in range(3):
+        frame = tk.Frame(
+            master=window,
+            relief=tk.RAISED,
+            borderwidth=1
+        )
+        frame.grid(row=i, column=j)
+        label = tk.Label(master=frame, text=f"Row {i}\nColumn {j}")
+        label.pack()
+
+window.mainloop()
+```
+Ez a kódrészlet `Frame`-ek 3x3-as gridjét adja, 1 egységnyi vastag közökkel, kiemelt widgetekkel.
+Figyeljük meg, hogy minden `Label` a saját `Frame`-jéhez van rendelve.
+
+Extra helyet hagyhatunk a `Label`-ök között ha `pad`-eket állitunk be.
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+for i in range(3):
+    window.columnconfigure(i, weight=1, minsize=75)
+    window.rowconfigure(i, weight=1, minsize=50)
+    for j in range(3):
+        frame = tk.Frame(
+            master=window,
+            relief=tk.RAISED,
+            borderwidth=1
+        )
+        frame.grid(row=i, column=j, padx=5, pady=5)
+        label = tk.Label(master=frame, text=f"Row {i}\nColumn {j}")
+        label.pack(padx=5, pady=5)
+
+window.mainloop()
+```
+A `columnconfigure()` és `rowconfigure()` megadja, hogyan viselkedjen a grid az ablak újraméretezésekor.
+
+*Feladat*: Állitgassuk a paramétereket!
+
+Alapértelmezetten widgetek a `grid` cellájuk közepén jelennek meg. Ezt át lehet állitani a `sticky`
+kulcsszó segitségével, aminek az értékei az égtájak röviditései.
+```python
+import tkinter as tk
+
+window = tk.Tk()
+window.columnconfigure(0, minsize=250)
+window.rowconfigure([0, 1], minsize=100)
+
+label1 = tk.Label(text="A")
+label1.grid(row=0, column=0, sticky="ne")
+
+label2 = tk.Label(text="B")
+label2.grid(row=1, column=0, sticky="sw")
+
+window.mainloop()
+```
+
+Vagyis ami a `.pack()` esetében a `TOP` volt, az itt most `n`.
 
 # Interaktivitás
 
+Eddig láttuk, hogyan kell létrehozni egy ablakot és widgeteket elhelyezni benne. Most nézzük meg,
+hogyan lehet ezeket használni. Ez a rész egy kicsit absztrakt, de kidolgozott példa követi a következő
+fejezetben.
+
+## Események és kezelésük
+
+Ahogy azt korábban láttuk, ahhoz hogy történjen valami, az `window.mainloop()`-ot meg kell hivnunk.
+Ekkor a program figyeli, hogy történik-e valami és ha igen, akkor lefuttatja a kód megfelelő részletét.
+Ez a Tkinter része, nem kellett megirnunk, viszont ún. eseménykezelő (event handler) függvényeket
+meg kell irnunk. Ez a függvény mindig meg lesz hivva, amikor egy adott esemény bekövetkezik, például
+megnyomjuk az egyik billentyűt.
+
+*Feladat*: Mi az esemény definiciója?
+
+## A `.bind()`
+
+A konkrét eseményt egy végrehajtandó utasitáshoz a `.bind()` köti. A szintaxis aránylag egyszerű
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+def handle_keypress(event):
+    """Print the character associated to the key pressed"""
+    print(event.char)
+
+# Bind keypress event to handle_keypress()
+window.bind("<Key>", handle_keypress)
+
+window.mainloop()
+```
+A lenyomott billentyű a terminálban fog megjelenni. De működik egérkattintásra is. Lássunk erre
+is egy példát:
+```python
+import tkinter as tk
+
+window = tk.Tk()
+
+def handle_click(event):
+    print("The button was clicked!")
+
+button = tk.Button(text="Click me!")
+
+button.bind("<Button-1>", handle_click)
+
+button.pack()
+
+window.mainloop()
+```
+Sokféle esemény elképzelhető, ezekről egy lista található [itt](https://web.archive.org/web/20190512164300/http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/event-types.html).
+
+## A `command`
+
+A kattintás esetén a már látott `command` egy egyszerűbb megközelités.
+
+```python
+import tkinter as tk
+
+
+def increase():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value + 1}"
+
+def decrease():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value - 1}"
+
+window = tk.Tk()
+
+window.rowconfigure(0, minsize=50, weight=1)
+window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+
+btn_decrease = tk.Button(master=window, text="-", command=decrease)
+btn_decrease.grid(row=0, column=0, sticky="nsew")
+
+lbl_value = tk.Label(master=window, text="0")
+lbl_value.grid(row=0, column=1)
+
+btn_increase = tk.Button(master=window, text="+", command=increase)
+btn_increase.grid(row=0, column=2, sticky="nsew")
+
+window.mainloop()
+
+```
+Ebben a példában először definiáltuk a függvényeket, amiket majd a `Button`-ök fognak hivni a `command`
+kulcsszó argumentukon keresztül. Ezek a függvények a `value` értékét növelik vagy csökkentik, amit a
+`lbl_value` jelenit meg.
+
+*Feladat*:
+- Figyeljük meg a `columnconfigure` használatát!
+- Mit jelent a `sticky="nsew"`
+
 # Fahrenheit-Celsius átváltó (példa)
 
+*Feladat*:
+- Elemezzük végig, hogy mi történik az alább bemutatott kódban!
+- Fejlesszük tovább!
+	- Ellenőrizzük, hogy a megadott bemenet szám-e és figyelmeztessük a felhasználót ha nem az!
+	- Legyen lehetőség a forditott irányba való átváltásra is.
+	- ...
+	
+	
+
+```python
+import tkinter as tk
+
+
+def fahrenheit_to_celsius():
+    fahrenheit = ent_temperature.get()
+    celsius = (5 / 9) * (float(fahrenheit) - 32)
+    lbl_result["text"] = f"{round(celsius, 2)} \N{DEGREE CELSIUS}"
+
+
+window = tk.Tk()
+
+window.title("Temperature Converter")
+window.resizable(width=False, height=False)
+frm_entry = tk.Frame(master=window)
+ent_temperature = tk.Entry(master=frm_entry, width=10)
+lbl_temp = tk.Label(master=frm_entry, text="\N{DEGREE FAHRENHEIT}")
+ent_temperature.grid(row=0, column=0, sticky="e")
+lbl_temp.grid(row=0, column=1, sticky="w")
+btn_convert = tk.Button(
+    master=window,
+    text="\N{RIGHTWARDS BLACK ARROW}",
+    command=fahrenheit_to_celsius  # <--- Add this line
+)
+
+lbl_result = tk.Label(master=window, text="\N{DEGREE CELSIUS}")
+frm_entry.grid(row=0, column=0, padx=10)
+btn_convert.grid(row=0, column=1, pady=10)
+lbl_result.grid(row=0, column=2, padx=10)
+
+window.mainloop()
+```
