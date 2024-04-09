@@ -41,5 +41,44 @@ még, amelyekkel dolgozni lehet.
 | `Text`   | Többsoros bemenetet fogad |
 | `Frame`  | Négyszög alakú terület, amivel widgeteket lehet csoportositani |
 
+Ezek csak a klasszikus widgetek, amelyekkel foglalkozni fogunk. Vannak themed widgetek is, amelyek
+további lehetőségeket biztositanak a GUI egyénivé tételére.
 
+### Szöveg megjelenitése
+
+Ahogy láttuk, erre a `Label` osztály van, ami egyébként képet is meg tud jeleniteni. A megjelenitett
+szöveget a felhasználó nem szerkesztheti. A fenti példában láttuk, hogyan lehet szöveget megjeleniteni.
+További kulcsszó argumentumok is léteznek, amelyekkel tovább specifikálható a megjelenés. Például a
+háttér és az előtér, vagyis jelen esetben a szöveg szintén megadhatjuk a `background` és `foreground`
+argumentumokkal, amik helyett a röviditéseket is használhatjuk (`bg` és `fg`)
+```python
+import tkinter as tk
+
+window = tk.Tk()
+greeting = tk.Label(text="Hello, User!", fg="blue", bg="brown")
+greeting.pack()
+window.mainloop()
+```
+A legtöbb HTML szin név müködik a Tkinterrel, de a hexadecimális kódot is használhatjuk
+```python
+greeting = tk.Label(text="Hello, User!", fg="#0000FF", bg="#A52A2A")
+```
+Megadhatjuk az ablak méretét is
+```python
+import tkinter as tk
+
+window = tk.Tk()
+greeting = tk.Label(
+    text="Hello, User!",
+    foreground="#0000FF",
+    background="#A52A2A",
+    height=10,
+    width=10)
+greeting.pack()
+window.mainloop()
+```
+Az ablak azért nem lesz négyzet, mert a méretek mértékegysége nem SI hanem szövegegység, vagyis a `0`
+karakter az egység az adott operációs rendszer alapértelmezett betűtipusában.
+
+### Kattintható gomb megjelenitése
 
