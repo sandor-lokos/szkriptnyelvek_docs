@@ -37,5 +37,6 @@ Válogatott fejezetek
 * [Excel](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md)
 * [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
 * [Matplotlib](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/matplotlib.md)
+* [TKinter](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md)
 * [Jupyter notebook](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/jupyter.md)
 * [Tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)
