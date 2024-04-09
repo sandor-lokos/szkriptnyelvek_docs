@@ -38,6 +38,12 @@ Válogatott fejezetek
 	- [Létrehozés, értékadás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#l%C3%A9trehoz%C3%A1s-cella-%C3%A9rt%C3%A9kad%C3%A1s)
 	- [Betöltés, ábrázolás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#bet%C3%B6lt%C3%A9s-%C3%A9s-%C3%A1br%C3%A1zol%C3%A1s)
 * [TKinter](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md)
+	- [Az első program](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md#az-els%C5%91-program)
+	- [Widgetek](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md#widgetek)
+	- [Geometry manager](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md#megjelen%C3%A9s-be%C3%A1llit%C3%A1sai-a-geometry-manager-rel)
+	- [Interaktivitás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md#interaktivit%C3%A1s)
+	- [Fahrenheit-Celsius átváltó (példa)](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md#fahrenheit-celsius-%C3%A1tv%C3%A1lt%C3%B3-p%C3%A9lda)
+	
 ----
 Egyelőre kimaradnak:
 	- [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
