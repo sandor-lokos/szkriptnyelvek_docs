@@ -35,8 +35,12 @@ Válogatott fejezetek
 * [Párhuzamos programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/parallel.md)
 * [Funkcionális programozás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functional.md)
 * [Excel](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md)
-* [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
-* [Matplotlib](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/matplotlib.md)
+	- [Létrehozés, értékadás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#l%C3%A9trehoz%C3%A1s-cella-%C3%A9rt%C3%A9kad%C3%A1s)
+	- [Betöltés, ábrázolás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/excel.md#bet%C3%B6lt%C3%A9s-%C3%A9s-%C3%A1br%C3%A1zol%C3%A1s)
 * [TKinter](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/tkinter_gui.md)
-* [Jupyter notebook](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/jupyter.md)
-* [Tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)
+----
+Egyelőre kimaradnak:
+	- [NumPy](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/numpy.md)
+	- [Matplotlib](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/matplotlib.md)
+	- [Jupyter notebook](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/jupyter.md)
+	- [Tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)

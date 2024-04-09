@@ -45,7 +45,7 @@ tudjuk megtenni. Ezután ugyanúgy tudunk hivatkozni a cellákra, azok értékei
 Használhatjuk továbbá az Excel beépitett ábrázoló eszközeit. Ezek az `openpyxl.chart`-ból elérhetőek.
 
 Lássunk egy példát, amelyben beolvasunk egy Excel fájt, aminek két lapja is van. Az adatokat, amelyeket a
-lapokon találunk, ábrázoljuk. Az Excel fájl itt elérhető.
+lapokon találunk, ábrázoljuk. Az Excel fájl [itt](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/minta.xlsx) elérhető.
 
 ```python
 import openpyxl as pyxl
