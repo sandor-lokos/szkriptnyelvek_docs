@@ -176,4 +176,37 @@ list(map(f, [1, 2, 3], [10, 20, 30], [100, 200, 300]))
 
 # Elemek válogatása iterálható objektumokból, a `filter()`
 
+A `filter()`-rel egy iterálható objektumból lehet szűrni elemeket, ahol a feltételt egy függvényen
+keresztül adjuk meg. A szintaxis a `map()`-hez hasonlóan
+```python
+filter(<f>, <iterable>)
+```
+ahol `<f>` a függvény, ami a szűrés feltételét adja meg, az `<iterable>` pedig az iterálható objektum.
+A `filter()` tulajdonképpen alkalmazza az `<f>` függvényt az `<iterable>` összes elemére és visszatérit
+egy iterátort ami az összes olyan elemet adja, ami megfelel a szűrési feltételnek.
+
+Például válogassuk ki az összes olyan számot egy tömbből, ami nagyobb mint 1.
+```python
+def greater_than_1(x):
+	return x > 1
+
+print(list(filter(greater_than_1, [0.01, 1.1, 1.2, 0.2, 3, 333])))
+```
+Az iterátor listává alakitásához itt is a `list()`-et használtuk.
+
+*Feladat*:
+- Irjuk át a fenti példát egysorosra a `lambda` segitségével!
+- Irjunk egy egysoros kódot az összes páratlan szám generálására egy adott tartományon! Használjuk a `range()` függvényt!
+- Irjunk egy egysoros kódot az összes primszám generálására 1-100-ig! Használjuk a `range()` függvényt!
+- Haladó: Irjunk egy kódot, ami ellenőrzi, hogy egy adott szám prim-e vagy sem. Ehhez használjuk fel a következőket:
+	- Az ellenőrzést a szám gyöke egészre kerekitve plusz 1-ig kell elvégezni. A gyökvonás a `math` modul `sqrt()` függvénye.
+	- Az összes számot 2-tól gyök(n)-ig listaleképezéssel létrehozhatjuk.
+	- Az oszthatóságot úgy ellenőrizhetjük, hogy az osztókra szűrünk. Ha egy szám osztóinak listája üres, akkor az prim.
+	- Összesen három sor kódra van szükségünk:
+		- `import math`
+		- `num = int(input("Enter the number: "))`
+		- ... ami a feladat.
+
+
 # Egy iterálható objektumok redukciója egy értékre, a `reduce()`
+
