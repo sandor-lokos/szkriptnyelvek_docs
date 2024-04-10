@@ -210,3 +210,57 @@ Az iterátor listává alakitásához itt is a `list()`-et használtuk.
 
 # Egy iterálható objektumok redukciója egy értékre, a `reduce()`
 
+A `reduce()` függvény nem a standard library része, az `from functools import reduce` módon érhető el.
+Ezt a függvényt is a fenti módon lehet hivni:
+```python
+reduce(<f>, <iterable>)
+```
+ahol az `<f>` két argumentumot kell, hogy fogadjon, mert a `reduce()` az iterálható objektum két elemét
+veszi és végzi el köztük a műveletet, amit az `<f>` ir elő, és térit vissza egy értéket. Igy redukálva,
+lépésről-lépésre az iterálható objektumot egy értékre. Például, adjuk össze a pozitiv egész számokat
+egytől tizig (ellenőrizhetjük is az eredményt a `sum()` függvénnyel:
+```python
+from functools import reduce
+
+def f(x, y):
+	return x + y
+
+print(reduce(f , [i for i in range(1,10)]))
+print(sum([i for i in range(1,10)]))
+```
+*Feladat*: Irjuk át a fenti `reduce` sort a `lambda` segitségével.
+
+A `reduce()` függvény egyébként általában is kiváltható más függvényekkel, igy például a `map()`
+vagy a `filter()` függvényekkel. Zárásként tehát álljon itt két példa ezekre.
+
+
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+print(list(map(str, numbers)))
+
+def custom_map(function, iterable):
+	return reduce(
+		lambda items, value: items + [function(value)],iterable,[],)
+
+print(list(custom_map(str, numbers)))
+```
+
+```python
+from functools import reduce
+
+numbers = list(range(10))
+print(numbers)
+
+def is_even(x):
+	return x % 2 == 0
+
+print(list(filter(is_even, numbers)))
+
+def custom_filter(function, iterable):
+	return reduce(
+		lambda items, value: items + [value] if function(value) else items,iterable,[])
+
+print(list(custom_filter(is_even, numbers)))
+```
