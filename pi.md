@@ -69,3 +69,5 @@ print(f'pi of NumPy = {np.pi}')
 print(f'pi of Chudnovsky\'s algorithm = {calc_pi.ownPi()}')
 print(f'pi of Ramanujan\'s algorithm = {another_pi.ownPi()}')
 ```
+
+![](Ramanujan.png)
