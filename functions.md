@@ -358,7 +358,7 @@ from time import sleep
 
 def process_data(auxdata):
     print("Beginning data processing...")
-    modified_data = auxdata + " that has been modified"
+    modified_data = str(auxdata) + " that has been modified"
     sleep(3)
     print("Data processing finished.")
     return modified_data
@@ -386,7 +386,7 @@ print("This is my file to demonstrate best practices.")
 
 def process_data(data):
     print("Beginning data processing...")
-    modified_data = data + " that has been modified"
+    modified_data = str(data) + " that has been modified"
     sleep(3)
     print("Data processing finished.")
     return modified_data
