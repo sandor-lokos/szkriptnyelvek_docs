@@ -286,7 +286,7 @@ print(thisdict)
 A dictionary-k esetén használható összes függvényekről egy lista [itt]( https://www.w3schools.com/python/python_dictionaries.asp) található.
 
 
-## Leképezés listákon
+# Leképezés listákon
 
 Listákat le is lehet képezni ami egy hasznos eljárás listák átalakitására az eredeti megtartása mellett, iletve
 akár szűrésre is használható. Persze ezek elérhetőek lennének standard `for` ciklussal is, és a leképezés is
