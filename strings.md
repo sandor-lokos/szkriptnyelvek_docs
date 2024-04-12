@@ -123,7 +123,7 @@ a feladatok megoldásához szükséges:
 ```python
 f1 = open("script_1.txt", 'r')
 for line in f1.readlines():
-print(line[0])
+	print(line[0])
 f1.close()
 ```
 
