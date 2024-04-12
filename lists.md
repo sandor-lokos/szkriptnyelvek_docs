@@ -297,7 +297,7 @@ Például: hozzunk létre egy listát, ami az eredeti lista számainak a négyze
 array = [1, 2, 3, 4, 5]
 new_array = []
 for i in range(len(array)):
-	new_array.appen(array[i]**2)
+	new_array.append(array[i]**2)
 ```
 Ehelyett irhatjuk egyszerűen:
 ```python
