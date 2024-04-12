@@ -315,7 +315,7 @@ from time import sleep
 data = ['data']
 
 print("Beginning data processing...")
-modified_data = data + " that has been modified"
+modified_data = str(data) + " that has been modified"
 sleep(3)
 print("Data processing finished.")
 ```
@@ -331,7 +331,7 @@ data = ['data']
 
 def process_data(auxdata):
     print("Beginning data processing...")
-    modified_data = auxdata + " that has been modified"
+    modified_data = str(auxdata) + " that has been modified"
     sleep(3)
     print("Data processing finished.")
     return modified_data
