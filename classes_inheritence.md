@@ -63,9 +63,9 @@ az alapvető paraméterek értékeit. Lássunk erre egy példát:
 ```python
 class Dog:
 	def __init__(self, name, age, color):
-	self.age = age
-	self.name = name
-	self.color = color
+		self.age = age
+		self.name = name
+		self.color = color
 
 morzsi = Dog("Morzsi",6,"barna")
 print(morzsi.age)
