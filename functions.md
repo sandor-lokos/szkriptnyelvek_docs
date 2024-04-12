@@ -69,7 +69,7 @@ De így is lehet csinálni:
 def add_function( * args ):
 	print(args[0]+args[1])
 
-example_function(1, 2)
+add_function(1, 2)
 ```
 Ekkor a kimenet:
 ```
