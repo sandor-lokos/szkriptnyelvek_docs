@@ -143,7 +143,7 @@ def echo(text, repetitions):
 
 if __name__ == "__main__":
 	text = input("Yell something at a mountain: ")
-	print(echo(text))
+	print(echo(text,3))
 ```
 
 Ebben a kódrészletben definiáltunk egy ```echo``` nevű függvényt, ami az argumentumában megadott 
