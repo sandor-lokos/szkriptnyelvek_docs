@@ -123,7 +123,7 @@ fogjuk meghivni. Ezt a `Button` osztály `command` metódusával tehetjük meg. 
 ```python
 import tkinter as tk
 
-def get_value(from, to): #This part for getting entry.
+def get_value(): #This part for getting entry.
     name = entry.get()
     print(name)
 
@@ -150,12 +150,12 @@ button = tk.Button(
     height=3,
     bg="blue",
     fg="yellow",
-    command=lambda: get_value(1.0, tk.END) # function added here
+    command= lambda: get_value()# function added here
 )
 
 label.pack()
-entry.pack()
 button.pack()
+entry.pack()
 
 window.mainloop()
 ```
