@@ -18,7 +18,7 @@ A funkcionális paradigma előnyei, hogy
 
 Ahhoz, hogy a funckionális programozás támogatott legyen egy nyelvben, a függvényeknek két tulajdonsággal
 kell birjanak:
-- Fogadjanak függvényeket, mint argumentum (erre láttunk [példát](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functions.md#függvény-mint-argumentum)
+- Fogadjanak függvényeket, mint argumentum (erre láttunk [példát](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/functions.md#függvény-mint-argumentum))
 - Téritsen vissza függvényt a meghivonak
 
 Pythonban a függvények is objektumok, minden amit meg lehet tenni számokkal, azt meg lehet tenni függvényekkel is.
