@@ -35,7 +35,7 @@ if __name__ == "__main__":
 	result = [] 
 	for x in range(10,N):
 		result.append(cube(x))
-	finish_time = time.perf_counter()ű
+	finish_time = time.perf_counter()
 	print("Program finished in {} seconds".format(finish_time-start_time))
 ```
 
