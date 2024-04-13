@@ -107,7 +107,6 @@ sorted(animals, key=lambda s: -len(s))
 Sőt, egy `lambda` kifejezést úgy is hivható, mint egy függvény
 ```python
 (lambda x: (x, x ** 2, x ** 3))(3)
-(lambda x: [x, x ** 2, x ** 3])(3)
 (lambda x: {1: x, 2: x ** 2, 3: x ** 3})(3)
 ```
 *Feladat*: magyarázzuk meg a különbséget a kimenetek között!
