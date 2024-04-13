@@ -20,7 +20,7 @@ import math
 N = 5000000
 
 def cube(x):
-	return math.sqrt(x)ű
+	return math.sqrt(x)
 	
 if __name__ == "__main__": 
 	# first way, using multiprocessing 
