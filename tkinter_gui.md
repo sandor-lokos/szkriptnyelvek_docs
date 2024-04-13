@@ -542,7 +542,8 @@ kulcsszó argumentukon keresztül. Ezek a függvények a `value` értékét növ
 - Fejlesszük tovább!
 	- Ellenőrizzük, hogy a megadott bemenet szám-e és figyelmeztessük a felhasználót ha nem az!
 	- Legyen lehetőség a forditott irányba való átváltásra is.
-	- ...
+	- Checkbox beépitése
+ 	- ...
 	
 	
 
