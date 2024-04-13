@@ -115,7 +115,7 @@ window.mainloop()
 De igazából nem a stilus az érdekes, hanem hogy a beirt információkat kezeljük. Erre három fő metódus
 van
 - `.get()` szöveg fogadásra
-- `.delele()` szöveg törlésére
+- `.delete()` szöveg törlésére
 - `.insert()` szöveg beszúrására
 Egy `Label`-lel jelezhetjük is, hogy mit várunk a felhasználótól. De valahogy végre is kell hajtanunk
 a parancsokat, meg kell hivnunk a függvényeket. Foglalkozzunk először csak a `.get()`-tel. Ezt egy gombbal
