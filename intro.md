@@ -8,10 +8,10 @@ fejlesztői környezetnek a PyCharm Community Edition-jét fogom használni. Aki
 A példakódok természetesen függetlenek lesznek a fejlesztői környezettől.
 
 Források a fejezethez:
-[Python története](https://en.wikipedia.org/wiki/History_of_Python)
-[Python története és filozófiája](https://www.python-course.eu/python3_history_and_philosophy.php)
-[Python segédlet (HU)](http://nyelvek.inf.elte.hu/leirasok/Python/index.php)
-[Python hivatalos oldala](https://www.python.org)
-[Mosh's full course](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
-[Python kurzus (HU)](https://sulipy.hu/)
-[Compilation of Python code](https://askubuntu.com/questions/324871/how-to-compile-a-python-file)
+- [Python története](https://en.wikipedia.org/wiki/History_of_Python)
+- [Python története és filozófiája](https://www.python-course.eu/python3_history_and_philosophy.php)
+- [Python segédlet (HU)](http://nyelvek.inf.elte.hu/leirasok/Python/index.php)
+- [Python hivatalos oldala](https://www.python.org)
+- [Mosh's full course](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
+- [Python kurzus (HU)](https://sulipy.hu/)
+- [Compilation of Python code](https://askubuntu.com/questions/324871/how-to-compile-a-python-file)
