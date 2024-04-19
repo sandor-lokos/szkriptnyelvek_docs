@@ -88,8 +88,8 @@ közül jónéhánnyal már találkoztunk, így itt csak példa szintjén említ
 ```python
 example_list = ["apple", "banana", "cherry"]
 # loop on a list
-for x in example_list:
-	print(x)
+for element in example_list:
+	print(element)
 
 
 # check if an element is in the list
