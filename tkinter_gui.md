@@ -347,8 +347,6 @@ window.mainloop()
 ```
 *Feladat*: teszteljük, hogy mi történik az ablak átméretezésekor.
 
-A `fill=tk.BOTH` beállitással az X és az Y irányt egyszerre lehet kitölteni.
-
 ## A `.place()`
 
 Ha pontosan szeretnénk megadni, hogy hova kerüljön a widget, akkor a `.place()`-t használjuk.
