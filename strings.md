@@ -75,7 +75,7 @@ tekintjük át a következő fejezetben.
 
 A továbbiakban minden feladat esetén szükségünk lesz fájlok olvasására és írására. Ez a feladat
 – mint majdnem minden a Python nyelvben – egyszerű szintaxissal megoldható. Próbaképpen
-töltsük le a ```script_1.txt``` fájlt a az e-learning rendszerből. Helyezzük el abba a mappába, amiben
+töltsük le a ```script_1.txt``` fájlt [innen](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/script_1.txt). Helyezzük el abba a mappába, amiben
 a kódunk is van és futtassuk a következő parancsot:
 
 ```python
