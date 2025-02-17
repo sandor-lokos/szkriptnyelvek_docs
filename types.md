@@ -10,4 +10,5 @@ A Python gyengén típusos nyelv. Ez nem azt jelenti, hogy nem léteznek benne t
 - Osztályok
 - Modulok
 - Fájl
+
 Nem mindegyik típussal fogunk a félév során találkozni.
