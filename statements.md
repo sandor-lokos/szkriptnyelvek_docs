@@ -27,11 +27,11 @@ szeretnénk megvizsgálni.
 ```python
 i=2
 if( i == 1 ):
-print("i is equal to 1")
+	print("i is equal to 1")
 elif( i > 1 ):
-print("i is greater than 1")
+	print("i is greater than 1")
 elif( i < 1):
-print("i is less then 1")
+	print("i is less then 1")
 ```
 
 # A ciklusok, break, continue
