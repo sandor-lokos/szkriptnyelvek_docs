@@ -308,7 +308,7 @@ Feleannyi sor kód, felennyi hibalehetőség.
 
 
 # Feladatok:
-- Írjunk a remove() függvény segítségével olyan kódot, ami helyettesítené a discard() függvényt!
+- Írjunk a `remove()` függvény segítségével olyan kódot, ami helyettesítené a `discard()` függvényt!
 - Írjunk egy programot, ami összegzi egy lista elemeit!
 - Írjunk olyan programot, amelyik megtalálja egy lista vagy tuple legnagyobb elemét
 - Írjunk olyan programot, amelyik megszámolja egy listában az olyan stringeket, amelyeknek az első és az utolsó karaktere azonos. Legyen a lista a következő:  ```x = ["1211" , "abcdae" , "xyz" , "abba", "11", "ffgtt"]``` . A várt eredmény: 3.
