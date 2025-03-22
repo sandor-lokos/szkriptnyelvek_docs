@@ -7,6 +7,8 @@ egyaránt le tudják tölteni az interpretert és fejlesztői környezetet. Ezt 
 fejlesztői környezetnek a PyCharm Community Edition-jét fogom használni. Akinek van bevált fejlesztői környezete, használhatja nyugodtan azt. 
 A példakódok természetesen függetlenek lesznek a fejlesztői környezettől.
 
+Illetve 2025-ben kipróbáljuk a [Google Colab](https://colab.research.google.com/) szolgáltatását
+
 Források a fejezethez:
 - [Python története](https://en.wikipedia.org/wiki/History_of_Python)
 - [Python története és filozófiája](https://www.python-course.eu/python3_history_and_philosophy.php)
