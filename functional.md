@@ -1,4 +1,4 @@
-A Python alapvetően nem funckionális nyelv, de vannak olyan funkciók. A funkcionális programozás egy
+A Python alapvetően nem funckionális nyelv, de vannak ilyan funkciók benne. A funkcionális programozás egy
 olyan paradigma, aminek az elsődleges működése függvényhiváson és kiértékelésen alapul szemben a 
 procedurális megközelitéssel. Pythonban ugyan kis szerep jut ennek a megközelitésnek, mégis érdemes 
 ismerni, arra is láunk majd példát, hogy milyen helyzetekben egyszerűsitheti a kódunkat és/vagy 
