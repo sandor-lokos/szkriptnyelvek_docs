@@ -93,7 +93,7 @@ print(bodri.name)
 print(fido.color)
 ```
 Példányok egyes tulajdonságait vagy a teljes példányt törölhetjük a `del` kulcsszóval:
-```
+```python
 del fido.age
 del fido
 ```
