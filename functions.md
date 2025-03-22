@@ -452,8 +452,4 @@ meg, de ez nem feltétlenül érdekel minket, ha csak használni akarjuk a kódo
 - Írjuk meg a korábbi Fibonacci-sorozat generátort rekurzívan.
 
 # Hasznos linkek
-- https://www.w3schools.com/python/python_functions.asp
-- https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
-- lambda
-- main
-- tipusos definiálás
+** hivatkozas beszurasa **
