@@ -13,7 +13,7 @@ alapján. Igaz, hogy érdemes külön osztályt definiálunk a két fajra, mert 
 ugyanakkor az is igaz, hogy a tulajdonságaikat beállító függvények részben vagy egészben azonosak lehetnek.
 Ebben az esetben tehát érdemes egy `Dog` és egy `Cat` nevű osztályt is létrehozni amelyek mindketten a `Pet` 
 osztályból öröklődnek. A következő metakóddal írhatjuk le ezt az öröklődést:
-```
+```python
 class Pet:
 	def age
 	def height
@@ -27,7 +27,7 @@ class Cat(Pet):
 ```
 Így a `Dog` és a `Cat` osztály is rendelkezik a Pet osztály függvényeivel. Pontosabban szólva a `Dog`
 és a `Cat` osztály példányaira is hatnak a `Pet` osztály függvényei. Például így:
-```
+```python
 morzsi = Dog()
 morzsi.age(6)
 cirmi = Cat()
