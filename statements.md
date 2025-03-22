@@ -53,42 +53,42 @@ Látszik, hogy az első kettő lehetőség a harmadik speciális esete.
 Hasonlóan egy tömb elemein is értelmezhető a ciklus:
 ```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for elements in array:
-	print(elements)
+for element in array:
+	print(element)
 ```
 (A tömbök használata a következő fejezet témája.)
 
 *Kérdés*: mit kapunk a következő kódrészletből?
 ```python
-for elements in "array":
-	print(elements)
+for element in "array":
+	print(element)
 ```
 
 Előfordulhat, hogy nem akarunk az előre megadott range-en végigfutni, csak addig, amíg egy
 feltétel nem teljesül, amikor is szeretnék kilépni a for-ciklusból. Erre való a break kulcsszó:
 ```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for elements in array:
-	if(elements == 4):
+for element in array:
+	if(element == 4):
 		break
-	print(elements)
+	print(element)
 ```	
 *Kérdés*: Mit kapunk a következő kódból?
 ```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for elements in array:
-	print(elements)
-	if(elements == 4):
+for element in array:
+	print(element)
+	if(element == 4):
 		break
 ```
 De az is lehet, hogy egyszerűen csak nem akarjuk figyelembe venni az egyik elemet az
 iterációban. Erre pedig a continue kulcsszó való.
 ```python
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for elements in array:
-	if(elements == 4):
+for element in array:
+	if(element == 4):
 		continue
-	print(elements)
+	print(element)
 ```
 A ```for```-ciklus egyfajta ```while()``` függvényként is felfogható, így pl. a
 ```python
