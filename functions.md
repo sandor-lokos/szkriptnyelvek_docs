@@ -260,9 +260,9 @@ Ezt a következőképpen lehet megtenni.
 def height(height: float) -> str:
     return f'You are {height} cm tall.'
 ```
-Ez egy nem túl hasznos függvény, de a [tipusositás](https://github.com/sandor-lokos/szkriptnyelvek_docs/blob/main/typing.md)
-jól megfigyelhető rajta, amiről később még lesz szó. Röviden, a függvény argumentumában jelezzük, hogy milyen
-tipusú bemenetet vár a függvény és utána azt is, hogy milyen tipusú lesz a kimenet.
+Ez egy nem túl hasznos függvény, de jól megfigyelhető rajta, hogy a függvény argumentumában jelezzük, hogy milyen
+tipusú bemenetet vár a függvény és utána azt is, hogy milyen tipusú lesz a kimenet. Ez más a felhasználók életét
+könnyiti meg.
 
 # A main függvény
 
